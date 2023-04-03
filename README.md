@@ -84,3 +84,16 @@ One-hot encoding: This method creates new binary columns for each unique categor
 Label encoding: This method assigns a unique numerical value to each category in the original categorical column. For example, if we have a "Location" column with the categories "Adelaide", "Doha", and "Dubai", label encoding would assign the values 0, 1, and 2 to these categories, respectively.
 
 Target encoding: This method replaces each category in the original categorical column with the mean target value for that category. For example, if we have a "Location" column and the target variable is the probability of a team winning a match, target encoding would replace each location with the mean probability of winning for matches played in that location.
+
+FYI
+Quantitative: This refers to variables that can take on numeric values and can be measured on a continuous or discrete scale. Examples include age, height, weight, and income.
+
+Categorical - Binary: This refers to variables that have only two possible values, often represented as 0 and 1 or as yes and no. Examples include gender (male/female), smoker (yes/no), and married (yes/no).
+
+Categorical - 3 to 5 categories: This refers to variables that have a small number of categories, typically between 3 and 5. Examples include educational level (high school, some college, college graduate), job type (managerial, professional, administrative, manual, other), and marital status (single, married, divorced, widowed).
+
+Categorical - 6 to 10 categories: This refers to variables that have a moderate number of categories, typically between 6 and 10. Examples include race/ethnicity, type of housing (house, apartment, condo, etc.), and level of satisfaction (very dissatisfied, somewhat dissatisfied, neutral, somewhat satisfied, very satisfied).
+
+Categorical - more than 10 categories: This refers to variables that have a large number of categories, typically more than 10. Examples include occupation, industry, and type of car.
+
+Unique Value: This refers to variables that have a unique value for each observation in the dataset, such as an ID number or a name.
