@@ -76,3 +76,11 @@ CATEGORICAL VARIABLES CONVERT TO NUMERICAL VARIABLES
 Location, Tournament, Series, and Comment columns are categorical variables.
 Possible methods to use: one-hot encoding, label encoding, and target encoding.
 
+Methods:
+There are several methods to do this:
+
+One-hot encoding: This method creates new binary columns for each unique category in the original categorical column. For example, if we have a "Location" column with the categories "Adelaide", "Doha", and "Dubai", one-hot encoding would create three new columns: "Location_Adelaide", "Location_Doha", and "Location_Dubai". The value in each new column would be 1 if the corresponding category is present for that row, and 0 otherwise.
+
+Label encoding: This method assigns a unique numerical value to each category in the original categorical column. For example, if we have a "Location" column with the categories "Adelaide", "Doha", and "Dubai", label encoding would assign the values 0, 1, and 2 to these categories, respectively.
+
+Target encoding: This method replaces each category in the original categorical column with the mean target value for that category. For example, if we have a "Location" column and the target variable is the probability of a team winning a match, target encoding would replace each location with the mean probability of winning for matches played in that location.
