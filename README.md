@@ -47,3 +47,32 @@ OBJECTIVE
 This ATP matches dataset is to provide a comprehensive data source for analyzing professional men's tennis matches played between 2000 and March 2018. The dataset includes information on the location, tournament, date, court, surface, round, best of, winner, loser, rank, sets won, and odds for each match.
 
 This dataset can contribute to the understanding of the performance and trends in men's professional tennis over an 18-year period. It can also help identify patterns and correlations between various factors such as location, court type, and player rankings. This dataset can be used by analysts, researchers, and tennis enthusiasts for various purposes such as player performance analysis, match prediction, and trend analysis.
+
+POTENTIAL ISSUES
+Potential issues with the dataset that needs to check:
+
+Missing values: As we saw earlier, some columns have a significant number of missing values. Depending on the analysis you want to do, you may need to deal with these missing values.
+
+Outliers: There may be outliers in the data, which could affect the results of your analysis. You may need to identify and handle these outliers appropriately.
+
+Data quality: It's important to ensure that the data is accurate and reliable. This could include checking for typos or other errors in the data.
+
+Data consistency: The data should be consistent across all columns. For example, if the tournament name is spelled differently in different rows, this could cause issues when trying to group or analyze the data.
+
+Data integrity: Ensure that the data has not been tampered with or altered in any way.
+
+Data format: The data should be in a consistent format across all columns. For example, if the date is not in a standardized format, this could make it difficult to perform analyses based on date.
+
+Data relevance: Ensure that the data is relevant to the analysis you want to perform. For example, if you are analyzing data from a specific time period, ensure that the data is from that time period.
+
+NEED TO CONVERT
+SPLIT the column for MONTH, DAY, YEAR
+Date Type should be INT64 and not OBJECT
+
+MISSING VALUES
+Wsets, Lsets, PSW, PSL, B365W, and B365L columns are non-null values but has missing values maybe because some matches may not have had data available for those particular fields.
+
+CATEGORICAL VARIABLES CONVERT TO NUMERICAL VARIABLES
+Location, Tournament, Series, and Comment columns are categorical variables.
+Possible methods to use: one-hot encoding, label encoding, and target encoding.
+
