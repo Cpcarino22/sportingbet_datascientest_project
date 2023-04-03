@@ -97,3 +97,11 @@ Categorical - 6 to 10 categories: This refers to variables that have a moderate 
 Categorical - more than 10 categories: This refers to variables that have a large number of categories, typically more than 10. Examples include occupation, industry, and type of car.
 
 Unique Value: This refers to variables that have a unique value for each observation in the dataset, such as an ID number or a name.
+
+General Rule: Data Cleaning before data manipulation:
+1. Cross-validation
+2. Hypothesis testing
+3. Replication
+4. Statistical Tests
+5. Peer Review - Can do
+6. Visualizations - Can do
