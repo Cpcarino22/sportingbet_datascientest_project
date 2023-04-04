@@ -105,3 +105,13 @@ General Rule: Data Cleaning before data manipulation:
 4. Statistical Tests
 5. Peer Review - Can do
 6. Visualizations - Can do
+
+Other studies:
+We propose a basic high-dimensional dynamic model for tennis match results with time varying player-specific abilities for different court surface types. Our statistical model can be treated in a likelihood-based analysis and is capable of handling high-dimensional datasets while the number of parameters remains small. In particular, we analyze 17 years of tennis matches for a panel of over 500 players, which leads to more than 2000 dynamic strength levels. We find that time varying player-specific abilities for different court surfaces are of key importance for analyzing tennis matches. We further consider several other extensions including player-specific explanatory variables and the accountance of specific configurations for Grand Slam tournaments. The estimation results can be used to construct rankings of players for different court surface types. We finally show that our proposed model can also be effective in forecasting. We provide evidence that our model significantly outperforms existing models in the forecasting of tennis match results.
+
+Based on your objective of beating bookmakers' algorithms on estimating the probability of a team winning a match, I would suggest considering the following combinations:
+
+Tournament, Surface, and Round
+Location, Surface, and Round
+Surface, Round, and Best of
+These combinations can help you identify any trends or patterns that may exist between these variables and the probability of a team winning a match. However, it is important to keep in mind that these variables alone may not provide a complete picture, and you may need to consider other factors such as the players' current form, head-to-head records, and injuries.
