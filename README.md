@@ -29,6 +29,13 @@ Columns and Descriptions:
 22. elo_loser: The Elo rating of the losing player before the match.
 23. proba_elo: The probability of the winning player winning the match according to the Elo ratings.
 
+Confidence_data
+1. match: The unique identifier for each match, linking the confidence data to the ATP tennis match dataset.
+2. PSW: The odds assigned to the player by the bookmaker. This value represents the payout ratio in case of winning the bet.
+3. win0: Indicates the actual winner of the match. 1 represents player 1 and 0 represents player 2.
+4. confidence0: The estimated confidence level of the bookmaker in the predicted winner of the match. This is calculated using statistical models and past performance data.
+5. date: The date when the match was played.
+
 Introduction
 CONTEXT
 Integration into your business:
@@ -65,25 +72,6 @@ Data format: The data should be in a consistent format across all columns. For e
 
 Data relevance: Ensure that the data is relevant to the analysis you want to perform. For example, if you are analyzing data from a specific time period, ensure that the data is from that time period.
 
-NEED TO CONVERT
-SPLIT the column for MONTH, DAY, YEAR
-Date Type should be INT64 and not OBJECT
-
-MISSING VALUES
-Wsets, Lsets, PSW, PSL, B365W, and B365L columns are non-null values but has missing values maybe because some matches may not have had data available for those particular fields.
-
-CATEGORICAL VARIABLES CONVERT TO NUMERICAL VARIABLES
-Location, Tournament, Series, and Comment columns are categorical variables.
-Possible methods to use: one-hot encoding, label encoding, and target encoding.
-
-Methods:
-There are several methods to do this:
-
-One-hot encoding: This method creates new binary columns for each unique category in the original categorical column. For example, if we have a "Location" column with the categories "Adelaide", "Doha", and "Dubai", one-hot encoding would create three new columns: "Location_Adelaide", "Location_Doha", and "Location_Dubai". The value in each new column would be 1 if the corresponding category is present for that row, and 0 otherwise.
-
-Label encoding: This method assigns a unique numerical value to each category in the original categorical column. For example, if we have a "Location" column with the categories "Adelaide", "Doha", and "Dubai", label encoding would assign the values 0, 1, and 2 to these categories, respectively.
-
-Target encoding: This method replaces each category in the original categorical column with the mean target value for that category. For example, if we have a "Location" column and the target variable is the probability of a team winning a match, target encoding would replace each location with the mean probability of winning for matches played in that location.
 
 FYI
 Quantitative: This refers to variables that can take on numeric values and can be measured on a continuous or discrete scale. Examples include age, height, weight, and income.
@@ -106,12 +94,65 @@ General Rule: Data Cleaning before data manipulation:
 5. Peer Review - Can do
 6. Visualizations - Can do
 
-Other studies:
-We propose a basic high-dimensional dynamic model for tennis match results with time varying player-specific abilities for different court surface types. Our statistical model can be treated in a likelihood-based analysis and is capable of handling high-dimensional datasets while the number of parameters remains small. In particular, we analyze 17 years of tennis matches for a panel of over 500 players, which leads to more than 2000 dynamic strength levels. We find that time varying player-specific abilities for different court surfaces are of key importance for analyzing tennis matches. We further consider several other extensions including player-specific explanatory variables and the accountance of specific configurations for Grand Slam tournaments. The estimation results can be used to construct rankings of players for different court surface types. We finally show that our proposed model can also be effective in forecasting. We provide evidence that our model significantly outperforms existing models in the forecasting of tennis match results.
+REFERENCE ELO RATING:
+Below 1400: Beginner level players who are new to the sport or have limited experience
+1400-1600: Novice to intermediate level players who have some experience and knowledge of the game
+1600-1800: Intermediate to advanced level players who have been playing for a few years and have developed a strong understanding of the game
+1800-2000: Advanced to expert level players who have significant experience and skill in the game and may have competed in local or regional tournaments
+2000 and above: Elite level players who have exceptional skill and experience and may compete at a national or international level
 
-Based on your objective of beating bookmakers' algorithms on estimating the probability of a team winning a match, I would suggest considering the following combinations:
+PSW - so much missing values that we cannot really identify how it was created based on the dataset.
+The PSW (Pinnacle Sports' Winning percentage) is a proprietary algorithm used by Pinnacle Sports to estimate the probability of a team winning a match. The exact details of how the PSW is calculated are not publicly available, but it is likely based on a combination of factors such as team performance history, team and player statistics, and other relevant factors.
 
-Tournament, Surface, and Round
-Location, Surface, and Round
-Surface, Round, and Best of
+Pinnacle Sports has a reputation for being one of the most accurate and reliable sportsbooks in the industry, and their PSW algorithm is one of the reasons for this. However, like any algorithm, it is not perfect and can sometimes be inaccurate in its predictions. This is where using alternative methods, such as Elo ratings and win percentages, can be useful for making more accurate predictions.
+
+NEXT STEPS
+CLEAN the DATASET
+
+NEED TO CONVERT
+SPLIT the column for MONTH, DAY, YEAR
+Date Type should be INT64 and not OBJECT
+
+MISSING VALUES
+Wsets, Lsets, PSW, PSL, B365W, and B365L columns are non-null values but has missing values maybe because some matches may not have had data available for those particular fields.
+
+CATEGORICAL VARIABLES CONVERT TO NUMERICAL VARIABLES
+Location, Tournament, Series, and Comment columns are categorical variables.
+Possible methods to use: one-hot encoding, label encoding, and target encoding.
+
+METHODS TO CONVERT:
+1. One-hot encoding: This method creates new binary columns for each unique category in the original categorical column. For example, if we have a "Location" column with the categories "Adelaide", "Doha", and "Dubai", one-hot encoding would create three new columns: "Location_Adelaide", "Location_Doha", and "Location_Dubai". The value in each new column would be 1 if the corresponding category is present for that row, and 0 otherwise.
+
+2. Label encoding: This method assigns a unique numerical value to each category in the original categorical column. For example, if we have a "Location" column with the categories "Adelaide", "Doha", and "Dubai", label encoding would assign the values 0, 1, and 2 to these categories, respectively. (this is the most fitting)
+
+3. Target encoding: This method replaces each category in the original categorical column with the mean target value for that category. For example, if we have a "Location" column and the target variable is the probability of a team winning a match, target encoding would replace each location with the mean probability of winning for matches played in that location.
+
+TRY TO CHECH IF ATP AND CONFIDENCE DATASETS ARE RELATED
+based on the date (which is the common column)
+
+PSW has 27% missing values - that can affect ML model
+
+Based on your objective of beating bookmakers' algorithms on estimating the probability of a team winning a match,
+SUGGESTION: consider to check the following combinations:
+
+1. Tournament, Surface, and Round
+For the combination of Tournament, Surface, and Round, this would show how players perform on different surfaces across different rounds of a tournament. For example, could analyze how the performance of players varies between the early rounds and the later rounds, or how certain players perform better on certain surfaces in different rounds. This could potentially help in predicting which players might have an advantage in certain matchups.
+
+2. Location, Surface, and Round
+For the combination of Location, Surface, and Round, this would show how players perform on different surfaces across different locations. For example, could analyze how certain players perform better on grass surfaces in Europe versus grass surfaces in North America, or how players might perform differently on clay surfaces in South America versus clay surfaces in Europe. This could potentially help in predicting which players might have an advantage in certain matchups based on their past performances in similar conditions.
+
+3. Surface, Round, and Best of
+For the combination of Surface, Round, and Best of, this could potentially show how players perform under different conditions of a match. Best of determines how many sets are required to win the match, so this could help to understand how players might perform under pressure in a 3-set versus a 5-set match on different surfaces. It could also help to identify which players might have an advantage in shorter or longer matches on certain surfaces.
+
 These combinations can help you identify any trends or patterns that may exist between these variables and the probability of a team winning a match. However, it is important to keep in mind that these variables alone may not provide a complete picture, and you may need to consider other factors such as the players' current form, head-to-head records, and injuries.
+
+
+OTHER STUDIES
+The time varying player-specific abilities for different court surfaces are of key importance for analyzing tennis matches.
+Consider several other extensions including player-specific explanatory variables and the accountance of specific configurations for Grand Slam tournaments. The estimation results can be used to construct rankings of players for different court surface types.
+
+REFERENCE TO REVIEW:
+https://www.econstor.eu/bitstream/10419/177699/1/18009.pdf
+TITLE: The analysis and forecasting of ATP tennis matches using a high-dimensional dynamic model
+
+
