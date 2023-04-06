@@ -164,40 +164,7 @@ can benefit on this surface
 
 ![image](https://user-images.githubusercontent.com/129508864/230341854-341b223c-d7db-4af0-8b96-c0fed369a17d.png)
 
-
 # GRAPH #3
->>> The scatter plot shows the correlation between the probability of Elo rating (represented by color) and the Elo ratings of the winner and loser. The blue dots represent matches where the loser had a higher Elo rating than the winner, while the red dots represent matches where the winner had a higher Elo rating than the loser.
-
->>> The scatter plot suggests a correlation between 'proba_elo' and 'elo_ratings'. The red and blue dots seem to be following a general trend upwards, indicating that as the 'proba_elo' score increases, so does the 'elo_ratings' score. This is also supported by the lighter shade of blue and red dots in the middle, which form a line going up. However, there are still a significant number of matches where the lower-rated player wins, as seen by the blue dots in the upper part of the plot.
-
->>> Overall, it seems that while higher Elo ratings do generally lead to a higher probability of winning, other factors can also play a role in determining the outcome of a match.
-
-![image](https://user-images.githubusercontent.com/129508864/230316862-ffd7aa8c-10ca-40e9-8b0a-e4b839cc1bcc.png)
-
-# GRAPH #4
->>> The bar chart shows the number of matches played by surface and round. The x-axis represents the round of the match, while the y-axis represents the number of matches played. The bars are color-coded according to the surface on which the matches were played. From the chart, it can be seen that the most number of matches were played on hard surfaces, followed by clay and grass. It can also be seen that the number of matches played decreases as the rounds progress, with the highest number of matches played in the 1st round and the lowest number of matches played in the final round.
-
->>> The decrease in match count from the first to the fourth round of the tournament can be attributed to the single-elimination format, which means that as the competition progresses towards the final, fewer players remain in the running.
-In a round-robin system, players compete against each other and the group winner advances to the next stage leading to the final. However, this system is relatively rare and there are only a few tournaments that use it. As a result, the number of matches played in such tournaments is significantly lower.
-
-![image](https://user-images.githubusercontent.com/129508864/230320066-103e0595-bd34-4e5f-bb73-92a0134c3f57.png)
-
-# GRAPH #5
->>> Based on the boxplot analysis, we can see that the different tennis tournament series have varying ranges of probability of winning based on their proba_elo scores. The proba_elo scores for each series are represented by the height of the box and whiskers. The line in the middle of the box represents the median value, while the box itself represents the interquartile range (IQR) of the data. The whiskers extend to the most extreme data points that are not considered outliers.
-
->>> The long dots at the bottom whiskers of the International series suggest that there are several outliers with lower proba_elo scores in this series. Meanwhile, the small boxes for the International and International Gold series suggest that the proba_elo scores for these tournaments are more concentrated within a narrow range. The Grand Slam and Masters 1000 series have the widest range of proba_elo scores, as represented by the length of their boxes and whiskers.
-
->>> The analysis suggests that players have a higher probability of winning in higher-ranked tournaments, such as Grand Slam and Masters 1000, compared to lower-ranked tournaments such as ATP250 and International, because the box plot shows that the median probability of winning, represented by the line in the middle of the box, is higher for Grand Slam and Masters 1000 than for lower-ranked tournaments.
-
->>> Additionally, the upper whisker of the box plot, which represents the highest probability of winning within 1.5 times the interquartile range, is also higher for Grand Slam and Masters 1000 than for lower-ranked tournaments. This suggests that the top players have a higher probability of winning in higher-ranked tournaments, which is likely due to the higher level of competition and prize money in those tournaments.
-
->>> Also, higher-ranked tournaments such as Grand Slam and Masters 1000 are considered more prestigious and offer more ranking points, prize money, and media exposure compared to lower-ranked tournaments such as ATP250 and International. This often results in stronger fields of players and more intense competition, which can lead to a higher level of performance and a greater likelihood of winning for top players. Additionally, players may be more motivated to perform well in higher-ranked tournaments due to the potential rewards and recognition they offer.
-
->>> On the other hand, higher-ranked tournaments like Grand Slam and Masters 1000 typically attract the top-ranked players in the world. These players have demonstrated higher levels of skill and performance, which could also contribute to their higher probabilities of winning in these tournaments.
-
-![image](https://user-images.githubusercontent.com/129508864/230322376-89c26efc-e828-4ea0-a5fd-5d7285666f77.png)
-
-# GRAPH #6
 >>> The bar graph shows the win percentage for the top 10 tennis players in the dataset. The win percentage is calculated by dividing the number of matches won by each player by the total number of matches played by the player.
 
 >>> From this, we can see that Djokovic N. and Murray A. have a 100% win percentage, which means that they have won all the matches they have played in the dataset. Federer R. has the third-highest win percentage of 83.62%, followed by Djokovic N. again with a slightly lower percentage of 82.47%.
@@ -208,7 +175,7 @@ In a round-robin system, players compete against each other and the group winner
 
 ![image](https://user-images.githubusercontent.com/129508864/230326253-5809b1b8-7862-4db1-a6bf-ec28c88bbd0a.png)
 
-# GRAPH #7
+# GRAPH #4
 >>> This code generates a figure with six subplots, each of which displays a histogram of a different numerical variable from the dataset. The six variables are:
 
 >>>>>> WRank: The ranking of the winning player
@@ -223,6 +190,38 @@ In a round-robin system, players compete against each other and the group winner
 >>> Overall, this code provides a visual summary of the distribution of each variable in the dataset, which can help to identify patterns and outliers that may be of interest to further investigate.
 
 ![image](https://user-images.githubusercontent.com/129508864/230327243-f34bb4aa-9ea9-4dbd-a86f-834a61852026.png)
+
+# GRAPH #5
+>>> The scatter plot shows the correlation between the probability of Elo rating (represented by color) and the Elo ratings of the winner and loser. The blue dots represent matches where the loser had a higher Elo rating than the winner, while the red dots represent matches where the winner had a higher Elo rating than the loser.
+
+>>> The scatter plot suggests a correlation between 'proba_elo' and 'elo_ratings'. The red and blue dots seem to be following a general trend upwards, indicating that as the 'proba_elo' score increases, so does the 'elo_ratings' score. This is also supported by the lighter shade of blue and red dots in the middle, which form a line going up. However, there are still a significant number of matches where the lower-rated player wins, as seen by the blue dots in the upper part of the plot.
+
+>>> Overall, it seems that while higher Elo ratings do generally lead to a higher probability of winning, other factors can also play a role in determining the outcome of a match.
+
+![image](https://user-images.githubusercontent.com/129508864/230316862-ffd7aa8c-10ca-40e9-8b0a-e4b839cc1bcc.png)
+
+# GRAPH #6
+>>> The bar chart shows the number of matches played by surface and round. The x-axis represents the round of the match, while the y-axis represents the number of matches played. The bars are color-coded according to the surface on which the matches were played. From the chart, it can be seen that the most number of matches were played on hard surfaces, followed by clay and grass. It can also be seen that the number of matches played decreases as the rounds progress, with the highest number of matches played in the 1st round and the lowest number of matches played in the final round.
+
+>>> The decrease in match count from the first to the fourth round of the tournament can be attributed to the single-elimination format, which means that as the competition progresses towards the final, fewer players remain in the running.
+In a round-robin system, players compete against each other and the group winner advances to the next stage leading to the final. However, this system is relatively rare and there are only a few tournaments that use it. As a result, the number of matches played in such tournaments is significantly lower.
+
+![image](https://user-images.githubusercontent.com/129508864/230320066-103e0595-bd34-4e5f-bb73-92a0134c3f57.png)
+
+# GRAPH #7
+>>> Based on the boxplot analysis, we can see that the different tennis tournament series have varying ranges of probability of winning based on their proba_elo scores. The proba_elo scores for each series are represented by the height of the box and whiskers. The line in the middle of the box represents the median value, while the box itself represents the interquartile range (IQR) of the data. The whiskers extend to the most extreme data points that are not considered outliers.
+
+>>> The long dots at the bottom whiskers of the International series suggest that there are several outliers with lower proba_elo scores in this series. Meanwhile, the small boxes for the International and International Gold series suggest that the proba_elo scores for these tournaments are more concentrated within a narrow range. The Grand Slam and Masters 1000 series have the widest range of proba_elo scores, as represented by the length of their boxes and whiskers.
+
+>>> The analysis suggests that players have a higher probability of winning in higher-ranked tournaments, such as Grand Slam and Masters 1000, compared to lower-ranked tournaments such as ATP250 and International, because the box plot shows that the median probability of winning, represented by the line in the middle of the box, is higher for Grand Slam and Masters 1000 than for lower-ranked tournaments.
+
+>>> Additionally, the upper whisker of the box plot, which represents the highest probability of winning within 1.5 times the interquartile range, is also higher for Grand Slam and Masters 1000 than for lower-ranked tournaments. This suggests that the top players have a higher probability of winning in higher-ranked tournaments, which is likely due to the higher level of competition and prize money in those tournaments.
+
+>>> Also, higher-ranked tournaments such as Grand Slam and Masters 1000 are considered more prestigious and offer more ranking points, prize money, and media exposure compared to lower-ranked tournaments such as ATP250 and International. This often results in stronger fields of players and more intense competition, which can lead to a higher level of performance and a greater likelihood of winning for top players. Additionally, players may be more motivated to perform well in higher-ranked tournaments due to the potential rewards and recognition they offer.
+
+>>> On the other hand, higher-ranked tournaments like Grand Slam and Masters 1000 typically attract the top-ranked players in the world. These players have demonstrated higher levels of skill and performance, which could also contribute to their higher probabilities of winning in these tournaments.
+
+![image](https://user-images.githubusercontent.com/129508864/230322376-89c26efc-e828-4ea0-a5fd-5d7285666f77.png)
 
 
 # NEXT STEPS
