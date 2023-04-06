@@ -99,31 +99,6 @@ The PSW (Pinnacle Sports' Winning percentage) is a proprietary algorithm used by
 
 Pinnacle Sports has a reputation for being one of the most accurate and reliable sportsbooks in the industry, and their PSW algorithm is one of the reasons for this. However, like any algorithm, it is not perfect and can sometimes be inaccurate in its predictions. This is where using alternative methods, such as Elo ratings and win percentages, can be useful for making more accurate predictions.
 
-NEXT STEPS
-CLEAN the DATASET
-
-NEED TO CONVERT
-SPLIT the column for MONTH, DAY, YEAR
-Date Type should be INT64 and not OBJECT
-
-MISSING VALUES
-Wsets, Lsets, PSW, PSL, B365W, and B365L columns are non-null values but has missing values maybe because some matches may not have had data available for those particular fields.
-
-CATEGORICAL VARIABLES CONVERT TO NUMERICAL VARIABLES
-Location, Tournament, Series, and Comment columns are categorical variables.
-Possible methods to use: one-hot encoding, label encoding, and target encoding.
-
-METHODS TO CONVERT:
-1. One-hot encoding: This method creates new binary columns for each unique category in the original categorical column. For example, if we have a "Location" column with the categories "Adelaide", "Doha", and "Dubai", one-hot encoding would create three new columns: "Location_Adelaide", "Location_Doha", and "Location_Dubai". The value in each new column would be 1 if the corresponding category is present for that row, and 0 otherwise.
-
-2. Label encoding: This method assigns a unique numerical value to each category in the original categorical column. For example, if we have a "Location" column with the categories "Adelaide", "Doha", and "Dubai", label encoding would assign the values 0, 1, and 2 to these categories, respectively. (this is the most fitting)
-
-3. Target encoding: This method replaces each category in the original categorical column with the mean target value for that category. For example, if we have a "Location" column and the target variable is the probability of a team winning a match, target encoding would replace each location with the mean probability of winning for matches played in that location.
-
-TRY TO CHECH IF ATP AND CONFIDENCE DATASETS ARE RELATED
-based on the date (which is the common column)
-
-PSW has 27% missing values - that can affect ML model
 
 Based on your objective of beating bookmakers' algorithms on estimating the probability of a team winning a match,
 SUGGESTION: consider to check the following combinations:
@@ -235,5 +210,32 @@ GRAPH 7
 >>> Overall, this code provides a visual summary of the distribution of each variable in the dataset, which can help to identify patterns and outliers that may be of interest to further investigate.
 
 ![image](https://user-images.githubusercontent.com/129508864/230327243-f34bb4aa-9ea9-4dbd-a86f-834a61852026.png)
+
+
+NEXT STEPS
+CLEAN the DATASET
+
+NEED TO CONVERT
+SPLIT the column for MONTH, DAY, YEAR
+Date Type should be INT64 and not OBJECT
+
+MISSING VALUES
+Wsets, Lsets, PSW, PSL, B365W, and B365L columns are non-null values but has missing values maybe because some matches may not have had data available for those particular fields.
+
+CATEGORICAL VARIABLES CONVERT TO NUMERICAL VARIABLES
+Location, Tournament, Series, and Comment columns are categorical variables.
+Possible methods to use: one-hot encoding, label encoding, and target encoding.
+
+METHODS TO CONVERT:
+1. One-hot encoding: This method creates new binary columns for each unique category in the original categorical column. For example, if we have a "Location" column with the categories "Adelaide", "Doha", and "Dubai", one-hot encoding would create three new columns: "Location_Adelaide", "Location_Doha", and "Location_Dubai". The value in each new column would be 1 if the corresponding category is present for that row, and 0 otherwise.
+
+2. Label encoding: This method assigns a unique numerical value to each category in the original categorical column. For example, if we have a "Location" column with the categories "Adelaide", "Doha", and "Dubai", label encoding would assign the values 0, 1, and 2 to these categories, respectively. (this is the most fitting)
+
+3. Target encoding: This method replaces each category in the original categorical column with the mean target value for that category. For example, if we have a "Location" column and the target variable is the probability of a team winning a match, target encoding would replace each location with the mean probability of winning for matches played in that location.
+
+TRY TO CHECH IF ATP AND CONFIDENCE DATASETS ARE RELATED
+based on the date (which is the common column)
+
+PSW has 27% missing values - that can affect ML model
 
 END
