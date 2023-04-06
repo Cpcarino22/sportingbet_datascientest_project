@@ -134,7 +134,9 @@ TITLE: The analysis and forecasting of ATP tennis matches using a high-dimension
 
 # Graph #1
 >>> The graph shows the frequency of each tournament series in the dataset. The dataset contains matches from eight different tournament series, namely International, ATP250, Grand Slam, Masters, Masters 1000, ATP500, International Gold, and Masters Cup. The International series has the highest frequency with 10792 matches, followed by ATP250 with 9550 matches and Grand Slam with 8255 matches. The Masters Cup series has the lowest frequency with only 240 matches.
+
 >>> The graph also provides insights into the distribution of tournaments across different levels of prestige, with the International and ATP250 series representing the lower-tier tournaments and the Grand Slam and Masters 1000 series representing the higher-tier tournaments. This suggests that players may have a higher probability of winning in higher-ranked tournaments, such as Grand Slam and Masters 1000, compared to lower-ranked tournaments such as ATP250 and International.
+
 >>> Overall, the countplot provides an easy way to visualize the frequency of each series in the dataset, which can be useful in understanding the distribution of the data.
 
 ![image](https://user-images.githubusercontent.com/129508864/230340832-085e67d6-0bb3-4789-b219-ac269a37b91d.png)
@@ -143,8 +145,10 @@ TITLE: The analysis and forecasting of ATP tennis matches using a high-dimension
 >>> Playing Surface: Different tennis surfaces, such as clay, grass, and hard court, can favor different types of players. 
 For example, clay court is generally considered to be a slower surface, which can give an advantage to players who are more patient and defensive. 
 Grass court, on the other hand, is faster and can favor players who have a big serve and aggressive playing style.
+
 >>> Hard courts are the most common surface in professional tennis. Players who perform well on hard surface,
 are more versatile and adaptable.
+
 >>> Clay courts are generally slower and provide more bounce. Players can having a benefit when they comfortable 
 with long rallies and with good defensive skills.Good players on clay are more defensive players.
 Grass courts are generally faster und provide less bounce. Players can have a benefit with more attacking style of play
@@ -153,7 +157,9 @@ Carpet is the least common surface. The carpet courts are fast and low-bouncing.
 can benefit on this surface
 
 >>> The plot shows the number of matches played on each court surface. The x-axis represents the different court surfaces, which are Hard, Clay, Grass, and Carpet. The y-axis shows the number of matches played on each surface.
+
 >>> From the plot, we can see that the most number of matches were played on Hard court surface, followed by Clay and Grass surfaces. There were very few matches played on Carpet surface, which is now a rare surface in professional tennis.
+
 >>> This plot provides insight into the popularity of each court surface in professional tennis and can be useful for players and coaches to make strategic decisions based on the surface they are playing on.
 
 ![image](https://user-images.githubusercontent.com/127007926/230314671-ef6125ca-4d5a-4919-92d5-1fe6b4ead42a.png)
@@ -161,12 +167,16 @@ can benefit on this surface
 
 # GRAPH #3
 >>> The scatter plot shows the correlation between the probability of Elo rating (represented by color) and the Elo ratings of the winner and loser. The blue dots represent matches where the loser had a higher Elo rating than the winner, while the red dots represent matches where the winner had a higher Elo rating than the loser.
+
 >>> The scatter plot suggests a correlation between 'proba_elo' and 'elo_ratings'. The red and blue dots seem to be following a general trend upwards, indicating that as the 'proba_elo' score increases, so does the 'elo_ratings' score. This is also supported by the lighter shade of blue and red dots in the middle, which form a line going up. However, there are still a significant number of matches where the lower-rated player wins, as seen by the blue dots in the upper part of the plot.
+
 >>> Overall, it seems that while higher Elo ratings do generally lead to a higher probability of winning, other factors can also play a role in determining the outcome of a match.
+
 ![image](https://user-images.githubusercontent.com/129508864/230316862-ffd7aa8c-10ca-40e9-8b0a-e4b839cc1bcc.png)
 
 # GRAPH #4
 >>> The bar chart shows the number of matches played by surface and round. The x-axis represents the round of the match, while the y-axis represents the number of matches played. The bars are color-coded according to the surface on which the matches were played. From the chart, it can be seen that the most number of matches were played on hard surfaces, followed by clay and grass. It can also be seen that the number of matches played decreases as the rounds progress, with the highest number of matches played in the 1st round and the lowest number of matches played in the final round.
+
 >>> Reason of decrease - One possible reason is that as the tournament progresses, the competition becomes tougher and the players who are not as skilled or experienced are eliminated. Therefore, the remaining players are more evenly matched and it becomes harder to win matches. Additionally, the physical demands of playing multiple matches over the course of the tournament can also take a toll on players, leading to injuries or fatigue that can affect their performance in later rounds. Finally, some players may withdraw from the tournament due to injury or other reasons, which would further reduce the number of matches played.
 
 >>> The decrease in match count from the first to the fourth round of the tournament can be attributed to the single-elimination format, which means that as the competition progresses towards the final, fewer players remain in the running.
