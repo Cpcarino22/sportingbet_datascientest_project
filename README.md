@@ -192,9 +192,6 @@ In a round-robin system, players compete against each other and the group winner
 >>> Additionally, the upper whisker of the box plot, which represents the highest probability of winning within 1.5 times the interquartile range, is also higher for Grand Slam and Masters 1000 than for lower-ranked tournaments. This suggests that the top players have a higher probability of winning in higher-ranked tournaments, which is likely due to the higher level of competition and prize money in those tournaments.
 
 >>> Also, higher-ranked tournaments such as Grand Slam and Masters 1000 are considered more prestigious and offer more ranking points, prize money, and media exposure compared to lower-ranked tournaments such as ATP250 and International. This often results in stronger fields of players and more intense competition, which can lead to a higher level of performance and a greater likelihood of winning for top players. Additionally, players may be more motivated to perform well in higher-ranked tournaments due to the potential rewards and recognition they offer.
-Both factors could contribute to the higher probability of winning in higher-ranked tournaments.
-
->>> On one hand, the prestige and larger audience of the Grand Slam and Masters 1000 tournaments could motivate players to perform at their best, which could result in higher winning probabilities.
 
 >>> On the other hand, higher-ranked tournaments like Grand Slam and Masters 1000 typically attract the top-ranked players in the world. These players have demonstrated higher levels of skill and performance, which could also contribute to their higher probabilities of winning in these tournaments.
 
