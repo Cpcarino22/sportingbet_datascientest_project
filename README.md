@@ -1,10 +1,14 @@
 # sportingbet_datascientest_project
-ATP matches dataset | All atp matches between 2000 and March 2018
+Dateset Used: ATP matches dataset | All atp matches between 2000 and March 2018
+Downloaded in Kaggle: https://www.kaggle.com/datasets/edouardthomas/atp-matches-dataset?resource=download
+Available for Download (FREE)
+Dataset is paired with another dataset named Confidence Data. The 2nd dataset describes the PSW numbers.
+
 
 # or Rows: 44708
 # of Columns: 23
 
-Columns and Descriptions:
+# Columns Descriptions:
 1. ATP: The ATP tournament number, which is a unique identifier for each ATP tournament in the dataset.
 2. Location: The location where the tournament was held, such as a city or country.
 3. Tournament: The name of the tournament.
@@ -29,8 +33,10 @@ Columns and Descriptions:
 22. elo_loser: The Elo rating of the losing player before the match.
 23. proba_elo: The probability of the winning player winning the match according to the Elo ratings.
 
-Introduction
+# Introduction
+
 CONTEXT
+
 Integration into your business:
 If your business is in the tennis industry or you offer services related to tennis, such as coaching or equipment sales, the ATP matches dataset can be useful for market research, trend analysis, and player performance evaluation. For example, dataset can be used to identify popular tournaments and players, analyze the popularity of different court surfaces, and track player rankings over time. This information can help make informed business decisions, such as which tournaments to sponsor or which players to hire for endorsement deals.
 
@@ -43,12 +49,14 @@ The ATP matches dataset can be valuable for businesses in the tennis industry as
 Scientific point of view:
 The ATP matches dataset can be used by researchers to study various aspects of tennis, including player performance, tournament outcomes, and the effects of different court surfaces on player performance. Researchers can also use the dataset to test hypotheses and develop new theories about the game of tennis. The dataset can be used in conjunction with other data sources, such as weather data and player demographics, to perform more complex analyses and gain deeper insights into the game.
 
-OBJECTIVE
+# OBJECTIVE
+
 This ATP matches dataset is to provide a comprehensive data source for analyzing professional men's tennis matches played between 2000 and March 2018. The dataset includes information on the location, tournament, date, court, surface, round, best of, winner, loser, rank, sets won, and odds for each match.
 
 This dataset can contribute to the understanding of the performance and trends in men's professional tennis over an 18-year period. It can also help identify patterns and correlations between various factors such as location, court type, and player rankings. This dataset can be used by analysts, researchers, and tennis enthusiasts for various purposes such as player performance analysis, match prediction, and trend analysis.
 
-POTENTIAL ISSUES
+# POTENTIAL ISSUES
+
 Potential issues with the dataset that needs to check:
 
 Missing values: As we saw earlier, some columns have a significant number of missing values. Depending on the analysis you want to do, you may need to deal with these missing values.
@@ -66,7 +74,7 @@ Data format: The data should be in a consistent format across all columns. For e
 Data relevance: Ensure that the data is relevant to the analysis you want to perform. For example, if you are analyzing data from a specific time period, ensure that the data is from that time period.
 
 
-FYI
+References
 Quantitative: This refers to variables that can take on numeric values and can be measured on a continuous or discrete scale. Examples include age, height, weight, and income.
 
 Categorical - Binary: This refers to variables that have only two possible values, often represented as 0 and 1 or as yes and no. Examples include gender (male/female), smoker (yes/no), and married (yes/no).
@@ -99,7 +107,7 @@ The PSW (Pinnacle Sports' Winning percentage) is a proprietary algorithm used by
 
 Pinnacle Sports has a reputation for being one of the most accurate and reliable sportsbooks in the industry, and their PSW algorithm is one of the reasons for this. However, like any algorithm, it is not perfect and can sometimes be inaccurate in its predictions. This is where using alternative methods, such as Elo ratings and win percentages, can be useful for making more accurate predictions.
 
-
+SUGGESTED 
 Based on your objective of beating bookmakers' algorithms on estimating the probability of a team winning a match,
 SUGGESTION: consider to check the following combinations:
 
