@@ -223,8 +223,9 @@ In a round-robin system, players compete against each other and the group winner
 
 ![image](https://user-images.githubusercontent.com/129508864/230322376-89c26efc-e828-4ea0-a5fd-5d7285666f77.png)
 
+# --- END of Step 1
 
-# NEXT STEPS
+# STEP 2
 CLEAN the DATASET
 
 NEED TO CONVERT
