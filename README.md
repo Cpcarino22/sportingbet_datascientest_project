@@ -206,7 +206,7 @@ can benefit on this surface
 >>> The decrease in match count from the first to the fourth round of the tournament can be attributed to the single-elimination format, which means that as the competition progresses towards the final, fewer players remain in the running.
 In a round-robin system, players compete against each other and the group winner advances to the next stage leading to the final. However, this system is relatively rare and there are only a few tournaments that use it. As a result, the number of matches played in such tournaments is significantly lower.
 
-![image](https://user-images.githubusercontent.com/129508864/230320066-103e0595-bd34-4e5f-bb73-92a0134c3f57.png)
+![image](https://user-images.githubusercontent.com/129508864/230348723-e2e2ab6e-fe8d-4d84-9f3c-d28168aa8a37.png)
 
 # GRAPH #7
 >>> Based on the boxplot analysis, we can see that the different tennis tournament series have varying ranges of probability of winning based on their proba_elo scores. The proba_elo scores for each series are represented by the height of the box and whiskers. The line in the middle of the box represents the median value, while the box itself represents the interquartile range (IQR) of the data. The whiskers extend to the most extreme data points that are not considered outliers.
