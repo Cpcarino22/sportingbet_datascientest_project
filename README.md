@@ -173,6 +173,8 @@ can benefit on this surface
 
 >>> Overall, the top 10 players in the dataset have very high win percentages, indicating that they are highly skilled players who have been successful in the matches they have played.
 
+>>> Note: The reason why some names appear twice in the output is most likely due to the fact that the dataset includes matches where these players played against each other, and they were either listed as the winner or the loser. For example, Djokovic N. appears twice in the output with win percentages of 100% and 82.47%, which means that he has won all matches where he was the winner and has lost some matches where he was the loser. Similarly, Federer R. appears twice with win percentages of 83.62% and 80%, indicating that he has won most matches he has played, but has also lost some.
+
 ![image](https://user-images.githubusercontent.com/129508864/230326253-5809b1b8-7862-4db1-a6bf-ec28c88bbd0a.png)
 
 # GRAPH #4
