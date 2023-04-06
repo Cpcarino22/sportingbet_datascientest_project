@@ -192,7 +192,7 @@ In a round-robin system, players compete against each other and the group winner
 
 ![image](https://user-images.githubusercontent.com/129508864/230320066-103e0595-bd34-4e5f-bb73-92a0134c3f57.png)
 
-GRAPH #5
+GRAPH 5
 >>> Based on the boxplot analysis, we can see that the different tennis tournament series have varying ranges of probability of winning based on their proba_elo scores. The proba_elo scores for each series are represented by the height of the box and whiskers. The line in the middle of the box represents the median value, while the box itself represents the interquartile range (IQR) of the data. The whiskers extend to the most extreme data points that are not considered outliers.
 
 >>> The long dots at the bottom whiskers of the International series suggest that there are several outliers with lower proba_elo scores in this series. Meanwhile, the small boxes for the International and International Gold series suggest that the proba_elo scores for these tournaments are more concentrated within a narrow range. The Grand Slam and Masters 1000 series have the widest range of proba_elo scores, as represented by the length of their boxes and whiskers.
@@ -208,3 +208,15 @@ Both factors could contribute to the higher probability of winning in higher-ran
 >>> On the other hand, higher-ranked tournaments like Grand Slam and Masters 1000 typically attract the top-ranked players in the world. These players have demonstrated higher levels of skill and performance, which could also contribute to their higher probabilities of winning in these tournaments.
 
 ![image](https://user-images.githubusercontent.com/129508864/230322376-89c26efc-e828-4ea0-a5fd-5d7285666f77.png)
+
+GRAPH 6
+>>> The bar graph shows the win percentage for the top 10 tennis players in the dataset. The win percentage is calculated by dividing the number of matches won by each player by the total number of matches played by the player.
+
+>>> From this, we can see that Djokovic N. and Murray A. have a 100% win percentage, which means that they have won all the matches they have played in the dataset. Federer R. has the third-highest win percentage of 83.62%, followed by Djokovic N. again with a slightly lower percentage of 82.47%.
+
+>>> The next two players, Nadal R. and Federer R. have win percentages of 82.11% and 80%, respectively. Youzhny M., Murray A., Agassi A., and Chiudinelli M. complete the top 10 with win percentages of 80%, 77.24%, 76.03%, and 75%, respectively.
+
+>>> Overall, the top 10 players in the dataset have very high win percentages, indicating that they are highly skilled players who have been successful in the matches they have played.
+
+![image](https://user-images.githubusercontent.com/129508864/230326253-5809b1b8-7862-4db1-a6bf-ec28c88bbd0a.png)
+
