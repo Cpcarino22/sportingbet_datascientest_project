@@ -186,6 +186,9 @@ GRAPH #3
 GRAPH 4
 >>> The bar chart shows the number of matches played by surface and round. The x-axis represents the round of the match, while the y-axis represents the number of matches played. The bars are color-coded according to the surface on which the matches were played. From the chart, it can be seen that the most number of matches were played on hard surfaces, followed by clay and grass. It can also be seen that the number of matches played decreases as the rounds progress, with the highest number of matches played in the 1st round and the lowest number of matches played in the final round.
 >>> Reason of decrease - One possible reason is that as the tournament progresses, the competition becomes tougher and the players who are not as skilled or experienced are eliminated. Therefore, the remaining players are more evenly matched and it becomes harder to win matches. Additionally, the physical demands of playing multiple matches over the course of the tournament can also take a toll on players, leading to injuries or fatigue that can affect their performance in later rounds. Finally, some players may withdraw from the tournament due to injury or other reasons, which would further reduce the number of matches played.
+>>> 
+>>> The decrease in match count from the first to the fourth round of the tournament can be attributed to the single-elimination format, which means that as the competition progresses towards the final, fewer players remain in the running.
+In a round-robin system, players compete against each other and the group winner advances to the next stage leading to the final. However, this system is relatively rare and there are only a few tournaments that use it. As a result, the number of matches played in such tournaments is significantly lower.
 
 ![image](https://user-images.githubusercontent.com/129508864/230320066-103e0595-bd34-4e5f-bb73-92a0134c3f57.png)
 
