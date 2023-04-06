@@ -97,9 +97,13 @@ General Rule: Data Cleaning before data manipulation:
 
 REFERENCE ELO RATING:
 A. Below 1400: Beginner level players who are new to the sport or have limited experience
+
 B. 1400-1600: Novice to intermediate level players who have some experience and knowledge of the game
+
 C. 1600-1800: Intermediate to advanced level players who have been playing for a few years and have developed a strong understanding of the game
+
 D. 1800-2000: Advanced to expert level players who have significant experience and skill in the game and may have competed in local or regional tournaments
+
 E. 2000 and above: Elite level players who have exceptional skill and experience and may compete at a national or international level
 
 PSW - so much missing values that we cannot really identify how it was created based on the dataset.
