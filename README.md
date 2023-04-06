@@ -184,5 +184,8 @@ GRAPH #3
 ![image](https://user-images.githubusercontent.com/129508864/230316862-ffd7aa8c-10ca-40e9-8b0a-e4b839cc1bcc.png)
 
 GRAPH 4
+>>> The bar chart shows the number of matches played by surface and round. The x-axis represents the round of the match, while the y-axis represents the number of matches played. The bars are color-coded according to the surface on which the matches were played. From the chart, it can be seen that the most number of matches were played on hard surfaces, followed by clay and grass. It can also be seen that the number of matches played decreases as the rounds progress, with the highest number of matches played in the 1st round and the lowest number of matches played in the final round.
+>>> Reason of decrease - One possible reason is that as the tournament progresses, the competition becomes tougher and the players who are not as skilled or experienced are eliminated. Therefore, the remaining players are more evenly matched and it becomes harder to win matches. Additionally, the physical demands of playing multiple matches over the course of the tournament can also take a toll on players, leading to injuries or fatigue that can affect their performance in later rounds. Finally, some players may withdraw from the tournament due to injury or other reasons, which would further reduce the number of matches played.
+
 ![image](https://user-images.githubusercontent.com/129508864/230320066-103e0595-bd34-4e5f-bb73-92a0134c3f57.png)
 
