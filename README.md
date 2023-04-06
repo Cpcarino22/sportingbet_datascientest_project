@@ -183,7 +183,7 @@ GRAPH #3
 >>> Overall, it seems that while higher Elo ratings do generally lead to a higher probability of winning, other factors can also play a role in determining the outcome of a match.
 ![image](https://user-images.githubusercontent.com/129508864/230316862-ffd7aa8c-10ca-40e9-8b0a-e4b839cc1bcc.png)
 
-GRAPH 4
+GRAPH #4
 >>> The bar chart shows the number of matches played by surface and round. The x-axis represents the round of the match, while the y-axis represents the number of matches played. The bars are color-coded according to the surface on which the matches were played. From the chart, it can be seen that the most number of matches were played on hard surfaces, followed by clay and grass. It can also be seen that the number of matches played decreases as the rounds progress, with the highest number of matches played in the 1st round and the lowest number of matches played in the final round.
 >>> Reason of decrease - One possible reason is that as the tournament progresses, the competition becomes tougher and the players who are not as skilled or experienced are eliminated. Therefore, the remaining players are more evenly matched and it becomes harder to win matches. Additionally, the physical demands of playing multiple matches over the course of the tournament can also take a toll on players, leading to injuries or fatigue that can affect their performance in later rounds. Finally, some players may withdraw from the tournament due to injury or other reasons, which would further reduce the number of matches played.
 >>> 
@@ -192,3 +192,19 @@ In a round-robin system, players compete against each other and the group winner
 
 ![image](https://user-images.githubusercontent.com/129508864/230320066-103e0595-bd34-4e5f-bb73-92a0134c3f57.png)
 
+GRAPH #5
+>>> Based on the boxplot analysis, we can see that the different tennis tournament series have varying ranges of probability of winning based on their proba_elo scores. The proba_elo scores for each series are represented by the height of the box and whiskers. The line in the middle of the box represents the median value, while the box itself represents the interquartile range (IQR) of the data. The whiskers extend to the most extreme data points that are not considered outliers.
+
+>>> The long dots at the bottom whiskers of the International series suggest that there are several outliers with lower proba_elo scores in this series. Meanwhile, the small boxes for the International and International Gold series suggest that the proba_elo scores for these tournaments are more concentrated within a narrow range. The Grand Slam and Masters 1000 series have the widest range of proba_elo scores, as represented by the length of their boxes and whiskers.
+
+>>> The analysis suggests that players have a higher probability of winning in higher-ranked tournaments, such as Grand Slam and Masters 1000, compared to lower-ranked tournaments such as ATP250 and International, because the box plot shows that the median probability of winning, represented by the line in the middle of the box, is higher for Grand Slam and Masters 1000 than for lower-ranked tournaments.
+
+>>> Additionally, the upper whisker of the box plot, which represents the highest probability of winning within 1.5 times the interquartile range, is also higher for Grand Slam and Masters 1000 than for lower-ranked tournaments. This suggests that the top players have a higher probability of winning in higher-ranked tournaments, which is likely due to the higher level of competition and prize money in those tournaments.
+>>> Also, higher-ranked tournaments such as Grand Slam and Masters 1000 are considered more prestigious and offer more ranking points, prize money, and media exposure compared to lower-ranked tournaments such as ATP250 and International. This often results in stronger fields of players and more intense competition, which can lead to a higher level of performance and a greater likelihood of winning for top players. Additionally, players may be more motivated to perform well in higher-ranked tournaments due to the potential rewards and recognition they offer.
+Both factors could contribute to the higher probability of winning in higher-ranked tournaments.
+
+>>> On one hand, the prestige and larger audience of the Grand Slam and Masters 1000 tournaments could motivate players to perform at their best, which could result in higher winning probabilities.
+
+>>> On the other hand, higher-ranked tournaments like Grand Slam and Masters 1000 typically attract the top-ranked players in the world. These players have demonstrated higher levels of skill and performance, which could also contribute to their higher probabilities of winning in these tournaments.
+
+![image](https://user-images.githubusercontent.com/129508864/230322376-89c26efc-e828-4ea0-a5fd-5d7285666f77.png)
