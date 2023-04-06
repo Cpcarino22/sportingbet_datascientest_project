@@ -153,8 +153,7 @@ FIVE GRAPHICAL REPRESENTATIONS WITH INTERPRETATION
 >>> The graph also provides insights into the distribution of tournaments across different levels of prestige, with the International and ATP250 series representing the lower-tier tournaments and the Grand Slam and Masters 1000 series representing the higher-tier tournaments. This suggests that players may have a higher probability of winning in higher-ranked tournaments, such as Grand Slam and Masters 1000, compared to lower-ranked tournaments such as ATP250 and International.
 >>> Overall, the countplot provides an easy way to visualize the frequency of each series in the dataset, which can be useful in understanding the distribution of the data.
 
-![image](https://user-images.githubusercontent.com/127007926/230316896-7a228ac4-93de-483d-8970-4d505c88e8f0.png)
-
+![image](https://user-images.githubusercontent.com/129508864/230312324-409f8ac0-ecca-47e6-b2c7-daca944942dd.png)
 
 #Graph #2
 >>>Playing Surface: Different tennis surfaces, such as clay, grass, and hard court, can favor different types of players. 
@@ -171,3 +170,9 @@ Carpet is the least common surface. The carpet courts are fast and low-bouncing.
 can benefit on this surface
 
 ![image](https://user-images.githubusercontent.com/127007926/230314671-ef6125ca-4d5a-4919-92d5-1fe6b4ead42a.png)
+
+GRAPH #2
+>>> The scatter plot shows the correlation between the probability of Elo rating (represented by color) and the Elo ratings of the winner and loser. The blue dots represent matches where the loser had a higher Elo rating than the winner, while the red dots represent matches where the winner had a higher Elo rating than the loser.
+>>> The scatter plot suggests a correlation between 'proba_elo' and 'elo_ratings'. The red and blue dots seem to be following a general trend upwards, indicating that as the 'proba_elo' score increases, so does the 'elo_ratings' score. This is also supported by the lighter shade of blue and red dots in the middle, which form a line going up. However, there are still a significant number of matches where the lower-rated player wins, as seen by the blue dots in the upper part of the plot.
+>>> Overall, it seems that while higher Elo ratings do generally lead to a higher probability of winning, other factors can also play a role in determining the outcome of a match.
+![image](https://user-images.githubusercontent.com/129508864/230316862-ffd7aa8c-10ca-40e9-8b0a-e4b839cc1bcc.png)
