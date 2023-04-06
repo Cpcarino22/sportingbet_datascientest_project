@@ -155,3 +155,18 @@ Graph #1
 
 ![image](https://user-images.githubusercontent.com/129508864/230312324-409f8ac0-ecca-47e6-b2c7-daca944942dd.png)
 
+Graph #2
+>>>Playing Surface: Different tennis surfaces, such as clay, grass, and hard court, can favor different types of players. 
+For example, clay court is generally considered to be a slower surface, which can give an advantage to players who are more patient and defensive. 
+Grass court, on the other hand, is faster and can favor players who have a big serve and aggressive playing style.
+
+# Hard courts are the most common surface in professional tennis. Players who perform well on hard surface,
+are more versatile and adaptable.
+# Clay courts are generally slower and provide more bounce. Players can having a benefit when they comfortable 
+with long rallies and with good defensive skills.Good players on clay are more defensive players.
+# Grass courts are generally faster und provide less bounce. Players can have a benefit with more attacking style of play
+and a strong serve-and-volley game. Good players on grass have more agressive style of play
+# Carpet is the least common surface. The carpet courts are fast and low-bouncing. Players with powerful serves and good footwork 
+can benefit on this surface
+
+![image](https://user-images.githubusercontent.com/127007926/230314671-ef6125ca-4d5a-4919-92d5-1fe6b4ead42a.png)
