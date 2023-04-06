@@ -162,7 +162,7 @@ can benefit on this surface
 
 >>> This plot provides insight into the popularity of each court surface in professional tennis and can be useful for players and coaches to make strategic decisions based on the surface they are playing on.
 
-![image](https://user-images.githubusercontent.com/127007926/230314671-ef6125ca-4d5a-4919-92d5-1fe6b4ead42a.png)
+![image](https://user-images.githubusercontent.com/129508864/230341854-341b223c-d7db-4af0-8b96-c0fed369a17d.png)
 
 
 # GRAPH #3
