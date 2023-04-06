@@ -168,8 +168,12 @@ Grass courts are generally faster und provide less bounce. Players can have a be
 and a strong serve-and-volley game. Good players on grass have more agressive style of play
 Carpet is the least common surface. The carpet courts are fast and low-bouncing. Players with powerful serves and good footwork 
 can benefit on this surface
-
+>>> The plot shows the number of matches played on each court surface. The x-axis represents the different court surfaces, which are Hard, Clay, Grass, and Carpet. The y-axis shows the number of matches played on each surface.
+>>> From the plot, we can see that the most number of matches were played on Hard court surface, followed by Clay and Grass surfaces. There were very few matches played on Carpet surface, which is now a rare surface in professional tennis.
+>>> This plot provides insight into the popularity of each court surface in professional tennis and can be useful for players and coaches to make strategic decisions based on the surface they are playing on.
 ![image](https://user-images.githubusercontent.com/127007926/230314671-ef6125ca-4d5a-4919-92d5-1fe6b4ead42a.png)
+![image](https://user-images.githubusercontent.com/129508864/230318993-edf1be67-3dce-4b3b-b05c-447e4df0a1cf.png)
+
 
 GRAPH #3
 >>> The scatter plot shows the correlation between the probability of Elo rating (represented by color) and the Elo ratings of the winner and loser. The blue dots represent matches where the loser had a higher Elo rating than the winner, while the red dots represent matches where the winner had a higher Elo rating than the loser.
