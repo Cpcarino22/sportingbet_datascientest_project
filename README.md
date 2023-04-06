@@ -223,12 +223,12 @@ GRAPH 6
 GRAPH 7
 >>> This code generates a figure with six subplots, each of which displays a histogram of a different numerical variable from the dataset. The six variables are:
 
-WRank: The ranking of the winning player
-LRank: The ranking of the losing player
-Wsets: The number of sets won by the winning player
-Lsets: The number of sets won by the losing player
-Best of: The format of the match (e.g. best of 3 or best of 5 sets)
-proba_elo: The Elo rating-based probability of the winning player winning the match.
+>>>>>> WRank: The ranking of the winning player
+>>>>>> LRank: The ranking of the losing player
+>>>>>> Wsets: The number of sets won by the winning player
+>>>>>> Lsets: The number of sets won by the losing player
+>>>>>> Best of: The format of the match (e.g. best of 3 or best of 5 sets)
+>>>>>> proba_elo: The Elo rating-based probability of the winning player winning the match.
 
 >>> The histograms are displayed using the "barstacked" style, which stacks bars on top of each other to show the relative frequencies of different values within each variable.
 
