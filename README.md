@@ -153,7 +153,7 @@ FIVE GRAPHICAL REPRESENTATIONS WITH INTERPRETATION
 >>> The graph also provides insights into the distribution of tournaments across different levels of prestige, with the International and ATP250 series representing the lower-tier tournaments and the Grand Slam and Masters 1000 series representing the higher-tier tournaments. This suggests that players may have a higher probability of winning in higher-ranked tournaments, such as Grand Slam and Masters 1000, compared to lower-ranked tournaments such as ATP250 and International.
 >>> Overall, the countplot provides an easy way to visualize the frequency of each series in the dataset, which can be useful in understanding the distribution of the data.
 
-![image](https://user-images.githubusercontent.com/127007926/230316626-5ab77170-1ff9-4340-9342-d206eef11ce2.png)
+![image](https://user-images.githubusercontent.com/127007926/230316896-7a228ac4-93de-483d-8970-4d505c88e8f0.png)
 
 
 #Graph #2
