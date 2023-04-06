@@ -29,13 +29,6 @@ Columns and Descriptions:
 22. elo_loser: The Elo rating of the losing player before the match.
 23. proba_elo: The probability of the winning player winning the match according to the Elo ratings.
 
-Confidence_data
-1. match: The unique identifier for each match, linking the confidence data to the ATP tennis match dataset.
-2. PSW: The odds assigned to the player by the bookmaker. This value represents the payout ratio in case of winning the bet.
-3. win0: Indicates the actual winner of the match. 1 represents player 1 and 0 represents player 2.
-4. confidence0: The estimated confidence level of the bookmaker in the predicted winner of the match. This is calculated using statistical models and past performance data.
-5. date: The date when the match was played.
-
 Introduction
 CONTEXT
 Integration into your business:
@@ -95,11 +88,11 @@ General Rule: Data Cleaning before data manipulation:
 6. Visualizations - Can do
 
 REFERENCE ELO RATING:
-Below 1400: Beginner level players who are new to the sport or have limited experience
-1400-1600: Novice to intermediate level players who have some experience and knowledge of the game
-1600-1800: Intermediate to advanced level players who have been playing for a few years and have developed a strong understanding of the game
-1800-2000: Advanced to expert level players who have significant experience and skill in the game and may have competed in local or regional tournaments
-2000 and above: Elite level players who have exceptional skill and experience and may compete at a national or international level
+A. Below 1400: Beginner level players who are new to the sport or have limited experience
+B. 1400-1600: Novice to intermediate level players who have some experience and knowledge of the game
+C. 1600-1800: Intermediate to advanced level players who have been playing for a few years and have developed a strong understanding of the game
+D. 1800-2000: Advanced to expert level players who have significant experience and skill in the game and may have competed in local or regional tournaments
+E. 2000 and above: Elite level players who have exceptional skill and experience and may compete at a national or international level
 
 PSW - so much missing values that we cannot really identify how it was created based on the dataset.
 The PSW (Pinnacle Sports' Winning percentage) is a proprietary algorithm used by Pinnacle Sports to estimate the probability of a team winning a match. The exact details of how the PSW is calculated are not publicly available, but it is likely based on a combination of factors such as team performance history, team and player statistics, and other relevant factors.
@@ -146,7 +139,6 @@ For the combination of Surface, Round, and Best of, this could potentially show 
 
 These combinations can help you identify any trends or patterns that may exist between these variables and the probability of a team winning a match. However, it is important to keep in mind that these variables alone may not provide a complete picture, and you may need to consider other factors such as the players' current form, head-to-head records, and injuries.
 
-
 OTHER STUDIES
 The time varying player-specific abilities for different court surfaces are of key importance for analyzing tennis matches.
 Consider several other extensions including player-specific explanatory variables and the accountance of specific configurations for Grand Slam tournaments. The estimation results can be used to construct rankings of players for different court surface types.
@@ -155,4 +147,11 @@ REFERENCE TO REVIEW:
 https://www.econstor.eu/bitstream/10419/177699/1/18009.pdf
 TITLE: The analysis and forecasting of ATP tennis matches using a high-dimensional dynamic model
 
+GRAPHS
+Interpretation:
+>>>>> The graph shows the frequency of each tournament series in the dataset. The dataset contains matches from eight different tournament series, namely International, ATP250, Grand Slam, Masters, Masters 1000, ATP500, International Gold, and Masters Cup. The International series has the highest frequency with 10792 matches, followed by ATP250 with 9550 matches and Grand Slam with 8255 matches. The Masters Cup series has the lowest frequency with only 240 matches.
+>>>>> The graph also provides insights into the distribution of tournaments across different levels of prestige, with the International and ATP250 series representing the lower-tier tournaments and the Grand Slam and Masters 1000 series representing the higher-tier tournaments. This suggests that players may have a higher probability of winning in higher-ranked tournaments, such as Grand Slam and Masters 1000, compared to lower-ranked tournaments such as ATP250 and International.
+>>>>> Overall, the countplot provides an easy way to visualize the frequency of each series in the dataset, which can be useful in understanding the distribution of the data.
+
+![image](https://user-images.githubusercontent.com/129508864/230312324-409f8ac0-ecca-47e6-b2c7-daca944942dd.png)
 
