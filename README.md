@@ -154,4 +154,4 @@ Interpretation:
 >>>>> Overall, the countplot provides an easy way to visualize the frequency of each series in the dataset, which can be useful in understanding the distribution of the data.
 
 ![image](https://user-images.githubusercontent.com/129508864/230312324-409f8ac0-ecca-47e6-b2c7-daca944942dd.png)
-
+Frequency of Series
