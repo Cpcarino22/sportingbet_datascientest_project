@@ -184,3 +184,5 @@ GRAPH #3
 ![image](https://user-images.githubusercontent.com/129508864/230316862-ffd7aa8c-10ca-40e9-8b0a-e4b839cc1bcc.png)
 
 GRAPH 4
+![image](https://user-images.githubusercontent.com/129508864/230320066-103e0595-bd34-4e5f-bb73-92a0134c3f57.png)
+
