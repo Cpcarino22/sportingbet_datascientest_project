@@ -264,4 +264,183 @@ based on the date (which is the common column)
 
 PSW has 27% missing values - that can affect ML model
 
+# Machine Learning Models
+
+# Decision Tree Classifier:
+
+>>> Model Brief: A type of supervised learning algorithm used for classification problems. It is used to predict the probability of a binary outcome (0 or 1) based on one or more input variables. The goal of classification is to predict a binary outcome, in which the outcome can be one of two classes, for example, whether a team will win or lose a match. The algorithm is called a decision tree because it builds a tree-like model of decisions and their possible consequences.
+
+In our project, it could be used to predict the probability of a team winning a match (1) or losing a match (0) based on various input variables. The model would be trained on historical data to learn the relationship between the input variables and the probability of a team winning or losing a match. The trained model could then be used to make predictions on new data to estimate the probability of a team winning or losing a match.
+
+>>> Result of Modelling
+
+Accuracy: 0.9464325654216059
+
+score train :  1.0
+score test :  0.9464325654216059
+
+Prediction	0	1
+True		
+0	8550	428
+1	530	8376
+
+precision    recall  f1-score   support
+
+           0       0.94      0.95      0.95      8978
+           1       0.95      0.94      0.95      8906
+
+    accuracy                           0.95     17884
+   macro avg       0.95      0.95      0.95     17884
+weighted avg       0.95      0.95      0.95     17884
+
+>>> Analysis:
+The model has an accuracy score of 0.946 on both the train and test sets, which is a good indicator that the model is not overfitting.
+
+The precision, recall, and f1-score for both classes are above 0.9, which is also a good indicator of a good performing model.
+Based on the classification report, the model performs well in predicting both class 0 and class 1, with a slightly higher recall for class 0.
+
+This model is a good candidate for your project.
+
+# Decision Tree Regression
+
+>>> Model Brief: A type of supervised learning algorithm used for both classification and regression problems. It is used to predict a continuous output variable based on one or more input variables. It tries to establish a relationship between a target variable and a set of predictor variables by constructing a decision tree. A decision tree is a tree-like structure where each internal node represents a test on an attribute, each branch represents an outcome of the test, and each leaf node represents a prediction of the target variable.
+
+In the project, it could be used to predict the probability of a team winning a match based on various input variables. The model would be trained on historical data to learn the relationship between the input variables and the probability of a team winning a match. The trained model could then be used to make predictions on new data to estimate the probability of a team winning a match.
+
+>>> Result of the Modelling
+
+score train :  1.0
+score test :  0.766493217097309
+
+Mean Squared Error: 0.05837620219190338
+Root Mean Squared Error: 0.24161167643949533
+Mean Absolute Error: 0.05837620219190338
+R2 Score: 0.766493217097309
+
+>>> Analysis
+The model has a score of 1.0 on the training set, which indicates overfitting. It has lower accuracy score of 0.766 on the test set compared to the Decision Tree Classifier. 
+
+The R2 score is 0.766 on the test set, which indicates that the model is performing reasonably well but there is room for improvement. The Mean Squared Error, Root Mean Squared Error, and Mean Absolute Error indicate that the model is making errors in its predictions. The numbers are also high, indicating a poor fit to the data.
+
+This model is not recommended for your project.
+
+
+# Logistic Regression:
+
+>>> Model Brief: A type of supervised learning algorithm used for binary classification problems. It is used to predict the probability of a binary outcome (0 or 1) based on one or more input variables.
+
+In our project, it could be used to predict the probability of a team winning a match (1) or losing a match (0) based on various input variables. The model would be trained on historical data to learn the relationship between the input variables and the probability of a team winning or losing a match. The trained model could then be used to make predictions on new data to estimate the probability of a team winning or losing a match.
+
+>>> Result of the Modelling
+
+Score on the train set 0.741570206341218
+Score on the test set 0.7423395213598748
+
+Prediction	0	1
+True		
+0	6087	2881
+1	1727	7189
+
+precision    recall  f1-score   support
+
+           0       0.78      0.68      0.73      8968
+           1       0.71      0.81      0.76      8916
+
+    accuracy                           0.74     17884
+   macro avg       0.75      0.74      0.74     17884
+weighted avg       0.75      0.74      0.74     17884
+
+>>> Analysis
+The model has an accuracy score of 0.741 on the training set and 0.742 on the test set, which indicates that the model is not overfitting. Also means that it can predict the outcome of the match with moderate accuracy.
+
+The precision, recall, and f1-score for both classes are above 0.7, which is also a good indicator of a good performing model.
+Based on the classification report, the model performs better in predicting class 1 than class 0, with a higher recall for class. All scores are also moderate for both classes, indicating average performance on predicting wins and losses. This model may be useful as a complement to other models, but may not be sufficient on its own to beat bookmakers' algorithms.
+
+
+# Linear Regression
+>>> Model Brief: A statistical method for modeling the relationship between a dependent variable and one or more independent variables. In the project, the dependent variable is the probability of a team winning a match, and the independent variables are various input variables such as team stats, player stats, bookmakers ratings, etc.
+
+The goal of linear regression is to find the line of best fit that describes the relationship between the dependent variable and the independent variables. The line of best fit is a straight line that minimizes the sum of the squared differences between the actual values of the dependent variable and the predicted values from the independent variables.
+
+>>> Result of the Modelling
+
+MSE on the training set: 4.658812858842604e-26
+MSE on the test set: 0.0013319759046108758
+
+Overfitting test
+
+Ridge result:
+MSE on the training set: 0.0008325432220229922
+MSE on the test set: 0.0020644337291440343
+
+Lasso Result:
+MSE on the training set: 0.2355202640351613
+MSE on the test set: 0.23583025208025807
+
+>>> Analysis
+The model has a very low MSE on the training set, which indicates overfitting.
+
+The MSE on the test set is higher than the training set, which indicates that the model is not performing well on new data.
+The model is likely overfitting the training data, and regularization techniques may be needed to improve the model's performance on the test set.
+
+This model is not recommended for your project.
+
+Both models (Ridge and Lasso Regression) have a high MSE on the test set, indicating that they may not fit the data well. These models are not recommended for your project.
+
+# Random Forest
+>>> Model Brief: A type of ensemble learning algorithm that uses multiple decision trees to make predictions.
+
+In the project objective, it could be used to estimate the probability of a team winning a match based on various input variables such as team stats, player stats, bookmaker ratings, etc. The model is trained on historical data to learn the relationship between the input variables and the probability of a team winning a match.
+
+>>> Result of the Modelling
+
+Classification Report (Training):
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     35825
+           1       1.00      1.00      1.00     35707
+
+    accuracy                           1.00     71532
+   macro avg       1.00      1.00      1.00     71532
+weighted avg       1.00      1.00      1.00     71532
+
+Classification Report (Test):
+              precision    recall  f1-score   support
+
+           0       0.93      0.96      0.94      8883
+           1       0.96      0.93      0.94      9001
+
+    accuracy                           0.94     17884
+   macro avg       0.94      0.94      0.94     17884
+weighted avg       0.94      0.94      0.94     17884
+
+MSE on the training set: 0.004705176704132417
+MSE on the test set: 0.031402823753075376
+
+>>> Analysis
+The model performs very well on both the training and test sets with an accuracy of 1.00 and 0.94, respectively. The model's precision, recall, and f1-score are also high for both classes (winning and losing teams), indicating that the model is able to correctly predict both outcomes with high confidence.
+
+However, it's important to note that the objective of the project is to beat bookmakers' algorithms on estimating the probability of a team winning a match. While the model's accuracy is high, it's not clear if it is able to outperform the bookmakers' algorithms. Additionally, the Mean Squared Error (MSE) is low for the training set but relatively higher for the test set, which may indicate that the model is overfitting on the training data and may not generalize well to new data.
+
+Overall, while the Random Forest model shows promising results, further analysis and comparison with bookmakers' algorithms would be needed to determine its effectiveness in beating the bookmakers.
+
+
+# Support Vector Machines:
+>>> Model Brief: A type of supervised learning algorithm that can be used for classification or regression problems. In classification, the algorithm tries to find a hyperplane in a high-dimensional space that can best separate the different classes of data. In regression, the algorithm tries to find a function that can fit the data as closely as possible while still having a smooth and regular shape.
+
+SVMs could be used to predict the probability of a team winning a match based on various input variables. The model would be trained on historical data to learn the relationship between the input variables and the probability of a team winning a match. SVMs have been shown to be effective in solving classification problems with high-dimensional data, which is often the case in sports betting where there are many variables to consider.
+
+>>> Result of Modelling
+
+Accuracy score on the training set: 0.9806939551529386
+Accuracy score on the test set: 0.9785282934466563
+
+>>> Analysis
+
+Based on the objective of beating bookmakers' algorithms on estimating the probability of a team winning a match, the accuracy scores for the Support Vector Machine model on both the training and test sets are high, indicating that the model is performing well.
+
+However, without additional information on the bookmakers' algorithms and their performance on this specific task, it is difficult to determine whether this model is actually outperforming the bookmakers.
+
+Further analysis and comparison with the bookmakers' algorithms would be necessary to draw any conclusions about the effectiveness of the SVM model in achieving the project's objective.
+
 END
