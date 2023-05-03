@@ -409,7 +409,7 @@ However, without additional information on the bookmakers' algorithms and their 
 Further analysis and comparison with the bookmakers' algorithms would be necessary to draw any conclusions about the effectiveness of the SVM model in achieving the project's objective.
 
 
-# Decision Tree Classifier:
+# Decision Tree Classifier: OUR CHOICE
 
 >>> Model Brief: A type of supervised learning algorithm used for classification problems. It is used to predict the probability of a binary outcome (0 or 1) based on one or more input variables. The goal of classification is to predict a binary outcome, in which the outcome can be one of two classes, for example, whether a team will win or lose a match. The algorithm is called a decision tree because it builds a tree-like model of decisions and their possible consequences.
 
