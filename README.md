@@ -444,4 +444,33 @@ Based on the classification report, the model performs well in predicting both c
 
 This model is a good candidate for your project.
 
+# Data Analysis
+
+# PCA
+The output below the graph shows the actual eigenvalues for the top 5 principal components, as well as their corresponding explained variance ratios. These values give an idea of the importance of each principal component in explaining the variability of the data.
+
+The higher the eigenvalue, the more important the corresponding principal component is in capturing the underlying patterns in the data. In this case, the first principal component has the highest eigenvalue, followed by the second, third, fourth, and fifth.
+
+[0.00200492 0.00190119 0.00178492 0.00161347 0.00157185]
+Eigenvalues are: [4.66350113 4.42223503 4.15179269 3.752989   3.65617574]
+
+![image](https://user-images.githubusercontent.com/129508864/235892679-d7a58de9-f426-4ee8-b49a-9d146ccd0a5f.png)
+
+![image](https://user-images.githubusercontent.com/129508864/235892749-19726c41-2c48-412a-aa7b-cfbe78c7fac1.png)
+
+![image](https://user-images.githubusercontent.com/129508864/235892851-22c0fca7-c9c3-4900-a7fe-d258c31d8922.png)
+
+![image](https://user-images.githubusercontent.com/129508864/235892910-7d41b81e-aeb0-4949-8985-0c1e81b325b4.png)
+
+![image](https://user-images.githubusercontent.com/129508864/235893057-5e4d5062-1a41-4735-86ee-01f39cceddf9.png)
+
+# tSNE
+
+# K-means
+
+
+
+
+
+
 END
