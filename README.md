@@ -266,41 +266,6 @@ PSW has 27% missing values - that can affect ML model
 
 # Machine Learning Models
 
-# Decision Tree Classifier:
-
->>> Model Brief: A type of supervised learning algorithm used for classification problems. It is used to predict the probability of a binary outcome (0 or 1) based on one or more input variables. The goal of classification is to predict a binary outcome, in which the outcome can be one of two classes, for example, whether a team will win or lose a match. The algorithm is called a decision tree because it builds a tree-like model of decisions and their possible consequences.
-
-In our project, it could be used to predict the probability of a team winning a match (1) or losing a match (0) based on various input variables. The model would be trained on historical data to learn the relationship between the input variables and the probability of a team winning or losing a match. The trained model could then be used to make predictions on new data to estimate the probability of a team winning or losing a match.
-
->>> Result of Modelling
-
-Accuracy: 0.9464325654216059
-
-score train :  1.0
-score test :  0.9464325654216059
-
-Prediction	0	1
-True		
-0	8550	428
-1	530	8376
-
-precision    recall  f1-score   support
-
-           0       0.94      0.95      0.95      8978
-           1       0.95      0.94      0.95      8906
-
-    accuracy                           0.95     17884
-   macro avg       0.95      0.95      0.95     17884
-weighted avg       0.95      0.95      0.95     17884
-
->>> Analysis:
-The model has an accuracy score of 0.946 on both the train and test sets, which is a good indicator that the model is not overfitting.
-
-The precision, recall, and f1-score for both classes are above 0.9, which is also a good indicator of a good performing model.
-Based on the classification report, the model performs well in predicting both class 0 and class 1, with a slightly higher recall for class 0.
-
-This model is a good candidate for your project.
-
 # Decision Tree Regression
 
 >>> Model Brief: A type of supervised learning algorithm used for both classification and regression problems. It is used to predict a continuous output variable based on one or more input variables. It tries to establish a relationship between a target variable and a set of predictor variables by constructing a decision tree. A decision tree is a tree-like structure where each internal node represents a test on an attribute, each branch represents an outcome of the test, and each leaf node represents a prediction of the target variable.
@@ -442,5 +407,41 @@ Based on the objective of beating bookmakers' algorithms on estimating the proba
 However, without additional information on the bookmakers' algorithms and their performance on this specific task, it is difficult to determine whether this model is actually outperforming the bookmakers.
 
 Further analysis and comparison with the bookmakers' algorithms would be necessary to draw any conclusions about the effectiveness of the SVM model in achieving the project's objective.
+
+
+# Decision Tree Classifier:
+
+>>> Model Brief: A type of supervised learning algorithm used for classification problems. It is used to predict the probability of a binary outcome (0 or 1) based on one or more input variables. The goal of classification is to predict a binary outcome, in which the outcome can be one of two classes, for example, whether a team will win or lose a match. The algorithm is called a decision tree because it builds a tree-like model of decisions and their possible consequences.
+
+In our project, it could be used to predict the probability of a team winning a match (1) or losing a match (0) based on various input variables. The model would be trained on historical data to learn the relationship between the input variables and the probability of a team winning or losing a match. The trained model could then be used to make predictions on new data to estimate the probability of a team winning or losing a match.
+
+>>> Result of Modelling
+
+Accuracy: 0.9464325654216059
+
+score train :  1.0
+score test :  0.9464325654216059
+
+Prediction	0	1
+True		
+0	8550	428
+1	530	8376
+
+precision    recall  f1-score   support
+
+           0       0.94      0.95      0.95      8978
+           1       0.95      0.94      0.95      8906
+
+    accuracy                           0.95     17884
+   macro avg       0.95      0.95      0.95     17884
+weighted avg       0.95      0.95      0.95     17884
+
+>>> Analysis:
+The model has an accuracy score of 0.946 on both the train and test sets, which is a good indicator that the model is not overfitting.
+
+The precision, recall, and f1-score for both classes are above 0.9, which is also a good indicator of a good performing model.
+Based on the classification report, the model performs well in predicting both class 0 and class 1, with a slightly higher recall for class 0.
+
+This model is a good candidate for your project.
 
 END
