@@ -534,6 +534,7 @@ Result of transformation and cleaning before encoding:
 
 
 ![Bild111](https://user-images.githubusercontent.com/129981869/236586539-6c065898-2502-4e4e-9609-891dff8537b9.png)![Bild112](https://user-images.githubusercontent.com/129981869/236586555-4c5d98bb-c0cf-4eb4-8312-1b417839bb22.png)
+
 After joining Winner and Loser dataset to get an player based data for the modelling.
 
 
@@ -577,6 +578,7 @@ Furthermore, Decision Tree classification can be computationally efficient for l
 In the project, it could be used to predict the probability of a team winning a match based on various input variables. The model would be trained on historical data to learn the relationship between the input variables and the probability of a team winning a match. The trained model could then be used to make predictions on new data to estimate the probability of a team winning a match.
 
 ![Bild114](https://user-images.githubusercontent.com/129981869/236588038-08d53020-2a83-46a4-91b0-68ada2140220.png)
+
 Accuracy Score: 0.9394989935137553 
 Score Train :        1.0
 Score test :          0.9394989935137553
@@ -613,22 +615,31 @@ The training dataset has a score of 1.0, indicating that the model has fit the d
 On the other hand, the test dataset has a score of 0.766, which suggests that the model is able to predict approximately 76.65% of the variance in the target variable in the test dataset. This performance can be considered decent.
 
 score train : 1.0 
+
 score test : 0.766493217097309
 
 Mean Squared Error: 0.05837620219190338
+
 Root Mean Squared Error: 0.24161167643949533
+
 Mean Absolute Error: 0.05837620219190338
+
 R2 Score: 0.766493217097309
 
 The MSE, RMSE, MAE, and R2 Score are common evaluation metrics used to assess the performance of regression models.
+
 The MSE measures the average squared difference between the predicted and actual target values, with a lower MSE indicating better performance. The MSE value of 0.05837620219190338 suggests that the predicted target values are off by around 0.06 on average from the actual target values.
+
 The RMSE is the square root of the MSE and measures the average difference between the predicted and actual target values in the same units as the target variable. A lower RMSE also indicates better performance. The RMSE value of 0.24161167643949533 means that, on average, the predicted target values are off by around 0.24 from the actual target values.
+
 The MAE measures the average absolute difference between the predicted and actual target values, with a lower MAE indicating better performance. The MAE value is the same as the MSE value of 0.05837620219190338, indicating that the predicted target values are off by around 0.06 on average from the actual target values.
+
 The R2 score (or coefficient of determination) measures the proportion of the variance in the target variable that can be explained by the independent variables in the model. The score ranges from 0 to 1, with a higher value indicating better performance. The R2 score of 0.766493217097309 suggests that the model explains around 77% of the variance in the target variable, which is a good performance.
 
   # Model 3: Logistics Regression
   
 Logistic regression is a popular machine learning technique for binary classification problems, such as predicting whether a team will win or lose a match. It models the probability of the target variable (win or lose) based on the input features, which can include various team statistics such as past performance, player injuries, and home/away field advantage.
+
 In the context of trying to beat bookmakers' algorithms on estimating the probability of a team winning a match, logistic regression can be a useful tool. By accurately predicting the outcome of a match, it can help identify potential betting opportunities where the bookmakers' odds differ from the predicted outcome. Additionally, logistic regression can be easily interpretable, allowing for insights into the relationships between the input features and the predicted probability of a team winning.
 
 
