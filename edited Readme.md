@@ -231,19 +231,7 @@ Lastly, cleaning data can help reduce computation time. The machine learning alg
 
 Overall, data cleaning is widely recognized as a critical step in the machine learning pipeline, with the potential to significantly impact the accuracy and effectiveness of the resulting model. As such, it is imperative that data cleaning is performed diligently and with care.
 
-Before   				 
-
-
-
-![Bild17](https://user-images.githubusercontent.com/129981869/236504985-be7c066a-829c-4515-8840-76a5cd540d78.png)
-
-
-After
-
-
-
-
-![Bild18](https://user-images.githubusercontent.com/129981869/236505074-dbfd201e-30aa-4537-8fa7-01a38c93cc31.png)
+![Bild17](https://user-images.githubusercontent.com/129981869/236504985-be7c066a-829c-4515-8840-76a5cd540d78.png)![Bild18](https://user-images.githubusercontent.com/129981869/236505074-dbfd201e-30aa-4537-8fa7-01a38c93cc31.png)
 
 The images above illustrate the dataset before and after it was cleaned. A detailed discussion of the dataset cleaning process follows.
 
@@ -272,11 +260,7 @@ To ensure accurate analysis, it is important to identify and handle any outliers
 
 
 
-![Bild21](https://user-images.githubusercontent.com/129981869/236505407-a1b0bbad-07d7-4be3-8507-2c92732e28aa.png)
-
-
-
-![Bild22](https://user-images.githubusercontent.com/129981869/236505515-b7959fd5-d255-4a93-84b6-817746292d80.png)
+![Bild21](https://user-images.githubusercontent.com/129981869/236505407-a1b0bbad-07d7-4be3-8507-2c92732e28aa.png)![Bild22](https://user-images.githubusercontent.com/129981869/236505515-b7959fd5-d255-4a93-84b6-817746292d80.png)
 
 
 First, the verification process for PSW, PSL, B365W, and B365L involved using box plots and scatter plots. After visual inspection of the data, the extreme values and outliers were retained rather than removed.
@@ -318,12 +302,7 @@ The histograms below for the 'B365W' and 'B365L' columns show similar distributi
     
 
 
-![Bild26](https://user-images.githubusercontent.com/129981869/236506097-f3e41779-eaec-4baa-a7d1-8ce93d5c5355.png)
-
-
-
-
-![Bild27](https://user-images.githubusercontent.com/129981869/236506180-d1b02f47-6deb-4181-9f42-90b6c02f8daa.png)
+![Bild26](https://user-images.githubusercontent.com/129981869/236506097-f3e41779-eaec-4baa-a7d1-8ce93d5c5355.png) ![Bild27](https://user-images.githubusercontent.com/129981869/236506180-d1b02f47-6deb-4181-9f42-90b6c02f8daa.png)
 
 The researchers found that the skewness values for both B365W and B365L are positive, indicating that the distributions are skewed to the right, with more extreme values on the right side of the distribution. Furthermore, the kurtosis values for both B365W and B365L are greater than 3, suggesting that the distributions are more peaked than the normal distribution, indicating the presence of more outliers.
 
@@ -362,12 +341,7 @@ In this case, the skewness score for Wsets is -0.023765413101382634, which indic
 
 
 
-![Bild33](https://user-images.githubusercontent.com/129981869/236506898-c42016c5-93b6-4df7-b162-221046d38bfa.png)
-
-
-
-
-![Bild34](https://user-images.githubusercontent.com/129981869/236506952-9047a427-778d-4dbc-ae92-ddab65326319.png)
+![Bild33](https://user-images.githubusercontent.com/129981869/236506898-c42016c5-93b6-4df7-b162-221046d38bfa.png) ![Bild34](https://user-images.githubusercontent.com/129981869/236506952-9047a427-778d-4dbc-ae92-ddab65326319.png)
 
 Based on the skewness scores and histograms, it is recommended to use different imputation methods for Wsets and Lsets. For Wsets, since the distribution is almost symmetrical or has a slight left skew, a reasonable imputation method would be to use the mean or median value to fill in the missing values. However, based on the calculated mean, median, and mode values, the median value of 2.0 is recommended to fill in the missing values of Wsets.
 
@@ -457,11 +431,17 @@ By using the strip() method to remove trailing spaces and the replace() method t
 
 
 
-Before
-![Bild45](https://user-images.githubusercontent.com/129981869/236509106-6a8c65a8-053e-49e9-9f86-8c50321cfac6.png)
 
-After
-![Bild46](https://user-images.githubusercontent.com/129981869/236509219-8882d3c0-2f65-448e-8f49-49c6e7f089a6.png)
+
+
+Before![Bild45](https://user-images.githubusercontent.com/129981869/236509106-6a8c65a8-053e-49e9-9f86-8c50321cfac6.png)
+
+
+After![Bild46](https://user-images.githubusercontent.com/129981869/236509219-8882d3c0-2f65-448e-8f49-49c6e7f089a6.png)
+
+
+
+
 
 # Concatenation
 
