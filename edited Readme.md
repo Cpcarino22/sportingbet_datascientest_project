@@ -66,7 +66,8 @@ Some of the feature variables that could be relevant in a dataset aimed at beati
 .The bet365 odds for the winner of the match can help in predicting the outcome of the match. These odds are based on various factors such as a player's current form, head-to-head records, and other relevant factors, which reflect the perceived probability of a player winning the match.
 
 .If a player has high odds of winning, it means that they are expected to perform well and have a better chance of winning the match. Conversely, if a player has low odds of winning, it means that they are not expected to perform as well and have a lower chance of winning the match.
-By combining the bet365 odds with other relevant variables like current form, head-to-head records, and injuries, you can potentially make a more informed prediction of the outcome of the match. However, it's important to keep in mind that these odds are not always 100% accurate and it's always wise to use multiple sources of information and analysis to make an informed decision.
+
+.By combining the bet365 odds with other relevant variables like current form, head-to-head records, and injuries, you can potentially make a more informed prediction of the outcome of the match. However, it's important to keep in mind that these odds are not always 100% accurate and it's always wise to use multiple sources of information and analysis to make an informed decision.
 
 # Target Variable
 The researchers created a new column (named target) to label the Win or Loss outcome of a player, with a value of 1 indicating a win and 0 indicating a loss.
@@ -81,11 +82,13 @@ Analyzing tennis matches' winning probability is crucial for time-varying player
 
 # Exploring Relevant Variable Combinations
 
-Based on your objective of beating bookmakers' algorithms on estimating the probability of a team winning a match,
+Based on your objective of beating bookmakers' algorithms on estimating the probability of a team winning a match.
 1. Tournament, Surface, and Round
 For the combination of Tournament, Surface, and Round, this would show how players perform on different surfaces across different rounds of a tournament. For example, could analyze how the performance of players varies between the early rounds and the later rounds, or how certain players perform better on certain surfaces in different rounds. This could potentially help in predicting which players might have an advantage in certain matchups.
+
 2. Location, Surface, and Round
 For the combination of Location, Surface, and Round, this would show how players perform on different surfaces across different locations. For example, could analyze how certain players perform better on grass surfaces in Europe versus grass surfaces in North America, or how players might perform differently on clay surfaces in South America versus clay surfaces in Europe. This could potentially help in predicting which players might have an advantage in certain matchups based on their past performances in similar conditions.
+
 3. Surface, Round, and Best of
 For the combination of Surface, Round, and Best of, this could potentially show how players perform under different conditions of a match. Best of determines how many sets are required to win the match, so this could help to understand how players might perform under pressure in a 3-set versus a 5-set match on different surfaces. It could also help to identify which players might have an advantage in shorter or longer matches on certain surfaces.
 
@@ -178,11 +181,10 @@ The scatter plot displays the relationship between the probability of Elo rating
 The scatter plot suggests that there is a positive correlation between 'proba_elo' and 'elo_ratings'. The trend line formed by the lighter shade of blue and red dots indicates that as the 'proba_elo' score increases, so does the 'elo_ratings' score. However, there are still a significant number of matches where the lower-rated player wins, as seen by the blue dots in the upper part of the plot.
 
 Overall, this suggests that while higher Elo ratings tend to correspond with a higher probability of winning, there are other factors at play in determining the outcome of a match.
+
 # Matches played on Surface and Rounds
 
-
 ![Bild13](https://user-images.githubusercontent.com/129981869/236499945-c039f146-3e44-4128-b049-461eef70da67.png)
-
 
 
 
@@ -440,221 +442,372 @@ Subsequently, a dictionary was created, and the researchers used the replace() m
 
 
 ![Bild42](https://user-images.githubusercontent.com/129981869/236508867-75dde0e4-888c-4f6d-a614-959cc863db52.png)
+
 After performing the data cleaning process, the researchers were left with 844 unique Winner names and 1297 unique Loser names from the initial 899 and 1400 unique names, respectively.
 
 
-![Bild43](https://user-images.githubusercontent.com/129981869/236508949-733612aa-290a-430e-912f-354357dd4884.png)
+
+
+![Bild100](https://user-images.githubusercontent.com/129981869/236585167-d21f3b80-ea1a-48e4-ae04-4a526c91b2ea.png)
+
 
 The researchers created a bar graph to visually compare the top players in the dataset before and after the cleaning process. The graph clearly showed the impact of the cleaning process, as the number of unique players decreased from 1400 to 1297 for the losers and from 899 to 844 for the winners. This reduction in the number of unique names indicates that many of the previously identified "unique" names were actually misspelled or duplicates.
 
 By using the strip() method to remove trailing spaces and the replace() method to correct misspelled names and initials, the researchers were able to identify the correct and unique names of players. This ensures that the dataset is more accurate and precise, and will lead to more reliable results in any future analyses.
 
 
-![Bild44](https://user-images.githubusercontent.com/129981869/236509032-15a9eb17-59db-4186-a657-6a51f47aae36.png)
 
+Before
 ![Bild45](https://user-images.githubusercontent.com/129981869/236509106-6a8c65a8-053e-49e9-9f86-8c50321cfac6.png)
 
-
+After
 ![Bild46](https://user-images.githubusercontent.com/129981869/236509219-8882d3c0-2f65-448e-8f49-49c6e7f089a6.png)
 
-# Data Transformation
-# Preprocessing
-Technics:
-1. ATP: OneHotEncoder with dummies
-2.Location: OneHotEncoder with dummies
-3.Tournament: OneHotEncoder with dummies
-4.Date: Already splitted to Year and Month
-5.Series: OneHotEncoder
-6.Court: replace({'Outdoor': 0, 'Indoor': 1})
-7.Surface: OneHotEncoding "Surface_Carpet", "Surface_Clay", "Surface_Grass", and "Surface_Hard",
-8.Round: Round Robin': 0, '1st Round': 1, '2nd Round': 2, '3rd Round': 3, '4th Round': 4, 'Quarterfinals': 5, 'Semifinals': 6, 'The Final': 7
-9.Best of: retain as it is as actual numbers represent the Best of
-10.Winner and Loser: One hot Encoding with Dummies
-11.WRank and LRank: grouped with Winner and Loser
-12.Comment: replace({'Completed': 1, 'Retired': 0, 'Walkover': 0, 'Disqualified': 0})
-13.elo_winner, elo_loser, and proba_elo: num already
-14.Year and Month: result of the Date split
-15.B365W_filled and B365L_filled: num already
+# Concatenation
+
+In order to ensure that the dataset is player-based, the researchers chose to divide the dataframe into two separate dataframes, one for the winner and one for the loser. Each dataframe will have its own set of corresponding attributes. To better understand this strategy, refer to the images below.
 
 
+![Bild101](https://user-images.githubusercontent.com/129981869/236585617-07d6602a-cd05-485f-9863-57b2987da723.png)![Bil102](https://user-images.githubusercontent.com/129981869/236585662-287e11cd-a807-413e-aa6b-1708eac6a8ad.png)
+
+Splitting the dataset into separate dataframes for the winner and the loser allows for more accurate and targeted analysis of each player's performance. By separating the data in this way, researchers can identify trends and patterns in the players' performances and compare them against each other. It also allows for easier processing and analysis of the data, as it eliminates the need to filter and sort the data every time a specific analysis is required. This approach helps to ensure that any insights or conclusions drawn from the data are more precise and reliable.
+
+After the separation of the dataset into winner and loser dataframes, a new column called 'target' was added by the researchers. The 'target' column serves as the target variable and has two values, 1 and 0. The value 1 represents the winner and 0 represents the loser.
 
 
+![Bild103](https://user-images.githubusercontent.com/129981869/236585799-4b06ae4c-e94a-4559-b8e1-46b00e8d3995.png)![Bild104](https://user-images.githubusercontent.com/129981869/236585831-66592bf5-e7a8-4b32-af12-21b99abc98b3.png)
+The researchers also added few more columns
+
+The two dataframes are concatenated, they are combined vertically into a single dataframe. This means that the rows of one dataframe are appended to the rows of the other dataframe to create a larger dataframe. The columns in the two dataframes must have the same name and type, otherwise an error will occur. After concatenation, the resulting dataframe will have the same number of columns as the original dataframes, but with a larger number of rows. 
+
+![Bild105](https://user-images.githubusercontent.com/129981869/236585899-8b927cad-4a71-4e48-bcf4-fba4b8b57aad.png)
+
+
+In the tennis dataset project, the researchers concatenated the winner and loser dataframes to form a single dataframe that contained information about both the winner and loser players for each match. This combined dataframe is now ready for data encoding.
+
+
+![Bild106](https://user-images.githubusercontent.com/129981869/236585996-8727c1fa-69bb-44ed-a2b2-43cb8267a9eb.png)
+
+
+# Data Encoding
+
+Data encoding is a crucial step in data preprocessing that involves converting categorical data into numerical format for use in machine learning algorithms. This process is essential because most machine learning algorithms only accept numerical inputs.
+
+Data encoding helps to reduce the dimensionality of the data, making it easier for machine learning algorithms to process. It also helps to avoid misinterpretation of categorical data as numerical values, which could lead to incorrect predictions or conclusions. By converting categorical data into numerical format, data encoding ensures that machine learning algorithms can effectively use the data to make accurate predictions or classifications.
+
+# One Hot Encoding (with Dummies)
+
+One hot encoding with dummies is an important technique used in data preprocessing to convert categorical variables into numerical variables. In the dataset provided, the columns, ‘ATP’, 'Location', 'Tournament', 'Series', 'Surface' and Players contain categorical variables that need to be converted into numerical variables for further analysis.
+
+One hot encoding with dummies creates new binary columns for each unique value in the original categorical column. For example, in the 'Location' column, there are 115 unique locations. One hot encoding with dummies creates 115 new binary columns, one for each unique location. If a match was played in Paris, the value in the Paris column will be 1, and all other location columns will be 0. This allows us to convert categorical variables into numerical variables that can be used in mathematical computations.
+
+
+![Bild107](https://user-images.githubusercontent.com/129981869/236586082-b0af1f00-4305-433b-9fcc-39ab41278f5d.png)
+
+
+The importance of one hot encoding with dummies before modelling lies in the fact that most machine learning algorithms cannot handle categorical variables as inputs. These algorithms require numerical inputs to make predictions or classifications. By converting categorical variables into numerical variables, we can use these variables as inputs in machine learning models.
+
+In addition, one hot encoding with dummies preserves the information in the original categorical variables, and it does not introduce any arbitrary ordering or hierarchy into the data. This means that the transformed data can be used in a wide range of machine learning models, without affecting the performance of the models.
+
+This is an important technique in data preprocessing, especially when dealing with categorical variables. It helps to convert categorical variables into numerical variables that can be used in mathematical computations and machine learning algorithms. It is also important to perform this technique before modelling to ensure the accuracy and reliability of the models.
+
+
+# Binary Encoding
+
+This type of encoding is a suitable method for encoding categorical data with only two possible values, such as the "Outdoor" and "Indoor" values in the "Court" column. This encoding method represents each category as a sequence of binary digits, with each digit corresponding to a power of two.
+
+This leads to a concise representation of the categories, which can be beneficial for machine learning models that require numerical input. Furthermore, binary encoding retains the order of the categories and can efficiently manage missing data.
+
+![Bild108](https://user-images.githubusercontent.com/129981869/236586188-5b6113dc-217a-4bf5-b1b5-7c5a6b1bbc61.png)
+
+Also, the researchers converted the "Comment" column into a binary variable. Completed is assigned the value 1, which indicates that the match was completed, while the other values (Retired, Walkover, and Disqualified) are assigned the value 0, which indicates that the match was not completed.
+
+![Bild109](https://user-images.githubusercontent.com/129981869/236586233-e1ad6a3a-bcf8-4623-9087-70eb674b1ec4.png)
+
+This encoding is appropriate for cases where we are interested in whether an event has occurred or not, and there are only a few possible outcomes. It is a type of binary encoding that can simplify the data and reduce the number of variables required to represent the information.
+
+# Ordinal Encoding
+
+This encoding is a good choice for encoding categorical data with a natural order or hierarchy, such as the "Round" column in the dataframe. Ordinal encoding maps each category to a unique integer based on its position in the order, preserving the order of the categories. This can be useful for machine learning models that can benefit from knowing the order or hierarchy of the categories.
+
+Additionally, ordinal encoding is a simple and efficient encoding method that can handle missing data by assigning a special value, such as -1, to represent missing values.
+
+![Bild110](https://user-images.githubusercontent.com/129981869/236586398-51f3f2ad-5528-4fab-9d3f-96774eff2c87.png)
+
+The researchers created a dictionary round_rank where each round is assigned a numerical value based on its rank. The lowest rank, Round Robin, is assigned the value 0, while The Final, the highest rank, is assigned the value 7. This assigns a unique integer value to each category in a categorical variable, based on their order or rank.
+
+
+# Dropping
+
+Dropping columns was used by the researchers in preprocessing the dateset. One such reason is that some columns in a dataset contain irrelevant or unnecessary information that is not required for analysis. In this project we dropped the columns, ‘Date’, ‘Wsets’, ‘Lsets’, ‘proba_elo’, ‘PSW’,  ‘PSL’, and ‘month’. 
+
+Dropping these columns can help to simplify the dataset and make it more manageable. Additionally, dropping columns can also help to reduce the noise in the dataset by removing columns with a lot of missing data or noise.
+
+Furthermore, these columns contain redundant information, and dropping them can help to reduce the redundancy in the dataset. By dropping such columns, memory requirements can be reduced, and the efficiency of the analysis can be improved.
 
 # Assessment methods:  
+
 Reconstituted professional situation: from a set of company data, the candidate must implement various pre-processing and data augmentation to make them usable through machine learning techniques.
 
 
+Result of transformation and cleaning before encoding:
 
-# Report 2
+
+![Bild111](https://user-images.githubusercontent.com/129981869/236586539-6c065898-2502-4e4e-9609-891dff8537b9.png)![Bild112](https://user-images.githubusercontent.com/129981869/236586555-4c5d98bb-c0cf-4eb4-8312-1b417839bb22.png)
+After joining Winner and Loser dataset to get an player based data for the modelling.
+
+
+
+
+
+
+
+
+# Report 2:
+
 # Machine Learning Models
-# Decision Tree Regression
-# Model Brief: 
-A type of supervised learning algorithm used for both classification and regression problems. It is used to predict a continuous output variable based on one or more input variables. It tries to establish a relationship between a target variable and a set of predictor variables by constructing a decision tree. A decision tree is a tree-like structure where each internal node represents a test on an attribute, each branch represents an outcome of the test, and each leaf node represents a prediction of the target variable.
+
+                           # Stages of the projects
+
+
+# Classification of the Problem
+
+The project is a classification problem as the objective is to predict the probability of a team winning a tennis match based on various features such as player rankings, previous wins, and court type. This aims to improve the accuracy of predictions compared to bookmakers' algorithms.
+
+The main performance metric used to compare the models is likely to be the accuracy, which measures the percentage of correctly predicted match outcomes in the test dataset. This metric is appropriate as it directly reflects the model's ability to correctly classify the match outcomes and is the most common metric used for classification problems.
+
+In addition to accuracy, other quantitative performance metrics such as precision, recall, and F1 score can provide additional insights into the model's ability to correctly classify positive and negative instances, and can be useful in evaluating the model's performance. 
+
+Qualitative performance metrics, such as the confusion matrix, can also be helpful in identifying where the model is performing well and where it needs improvement.
+
+# Model Choice and Optimization
+
+  # Model 1: Decision Tree Classification
+Decision Tree classification can be a suitable machine learning technique for achieving the objective of beating bookmakers' algorithms on estimating the probability of a team winning a match. By using various features such as player rankings, previous wins, and court type, the Decision Tree classifier can predict the outcome of a tennis match.
+
+One reason to use Decision Tree classification is its interpretability. The resulting tree structure can provide insights into which features are most important for predicting the match outcome. This information can be used to improve the accuracy of the bookmakers' algorithms.
+
+Another reason to use Decision Tree classification is its ability to handle both categorical and numerical data, making it suitable for sports analytics. It can also handle missing values and outliers, which are common in real-world datasets.
+
+Furthermore, Decision Tree classification can be computationally efficient for large datasets with high dimensionality, which is important for handling the large amount of data required for predicting tennis match outcomes. Overall, Decision Tree classification can be a valuable tool for achieving the objective of this project.
+
+![Bild113](https://user-images.githubusercontent.com/129981869/236588007-31b845bc-906d-49b2-ac39-77109eeb8a66.png)
+
 
 In the project, it could be used to predict the probability of a team winning a match based on various input variables. The model would be trained on historical data to learn the relationship between the input variables and the probability of a team winning a match. The trained model could then be used to make predictions on new data to estimate the probability of a team winning a match.
-# Result of the Modelling
+
+![Bild114](https://user-images.githubusercontent.com/129981869/236588038-08d53020-2a83-46a4-91b0-68ada2140220.png)
+Accuracy Score: 0.9394989935137553 
+Score Train :        1.0
+Score test :          0.9394989935137553
+
+
+The output indicates that the Decision Tree Classifier model achieved an accuracy of around 94% in predicting the target variable for the test set. However, this high accuracy score may also indicate overfitting, where the model has become too complex and tailored to the training data, resulting in poor performance on new, unseen data.
+
+The training score of the decision tree classifier model is 1.0, indicating that it has achieved a perfect fit with the training data. However, this could suggest that the model is overfitting since it may have memorized the training data instead of learning the underlying patterns.
+
+On the other hand, the test score of the model is 0.93, indicating that it has performed well on unseen data. However, the significant difference between the training and test scores confirms that the model is overfitting to some extent, as it is performing much better on the training data than on the test data.
+
+The confusion matrix indicates that the model correctly predicted 8856 instances for the true negatives (TN) class, incorrectly predicted 80 instances for the false positives (FP) class, incorrectly predicted 105 instances for the false negatives (FN) class, and correctly predicted 8843 instances for the true positives (TP) class.
+
+
+![Bild115](https://user-images.githubusercontent.com/129981869/236588098-1dac1964-5696-428f-9485-af262fc6e9de.png)
+
+According to the classification report, the precision for both classes is 0.99, indicating that the model has a high proportion of correct predictions for both classes. The recall for both classes is also 0.99, indicating that the model has a high rate of identifying actual positives. The F1-score for both classes is 0.99, indicating high accuracy in predicting both classes.
+The support is the number of actual occurrences of the class in the test data, and the accuracy of the model is 0.99, which is very high.
+However, despite the high performance metrics, it is possible that the model is overfitting.
+
+  # Model 2: Decision Tree Regression
+  
+In the context of trying to beat bookmakers' algorithms on estimating the probability of a team winning a match, Decision Tree regression can be a useful machine learning technique. By using input features such as team statistics, player performance, and match conditions, a Decision Tree model can predict the probability of a team winning a match.
+
+The interpretability of Decision Tree regression can also be beneficial in this objective, as it allows for understanding the important factors that contribute to a team's likelihood of winning. Additionally, the flexibility of Decision Tree regression can handle both linear and nonlinear relationships between the input features and the target variable, allowing for capturing more complex patterns in the data.
+
+Finally, the computational efficiency of Decision Tree regression can be advantageous for large datasets with high dimensionality, which can be useful in the context of predicting the outcomes of many matches. Overall, Decision Tree regression can be a useful tool in the objective of trying to beat bookmakers' algorithms on estimating the probability of a team winning a match.
+
+
+![Bild116](https://user-images.githubusercontent.com/129981869/236588160-ae8e5eb6-e8b7-45cd-a52c-a4243d37ebbe.png)
+
+The training dataset has a score of 1.0, indicating that the model has fit the data perfectly. However, this high score may also suggest overfitting, where the model is overly complex and has memorized the training data instead of learning the underlying patterns.
+
+On the other hand, the test dataset has a score of 0.766, which suggests that the model is able to predict approximately 76.65% of the variance in the target variable in the test dataset. This performance can be considered decent.
+
 score train : 1.0 
 score test : 0.766493217097309
-Mean Squared Error: 0.05837620219190338 Root Mean Squared Error: 0.24161167643949533 Mean Absolute Error: 0.05837620219190338 R2 Score: 0.766493217097309
-# Analysis 
-The model has a score of 1.0 on the training set, which indicates overfitting. It has lower accuracy score of 0.766 on the test set compared to the Decision Tree Classifier.
 
-The R2 score is 0.766 on the test set, which indicates that the model is performing reasonably well but there is room for improvement. The Mean Squared Error, Root Mean Squared Error, and Mean Absolute Error indicate that the model is making errors in its predictions. 
-The numbers are also high, indicating a poor fit to the data.
+Mean Squared Error: 0.05837620219190338
+Root Mean Squared Error: 0.24161167643949533
+Mean Absolute Error: 0.05837620219190338
+R2 Score: 0.766493217097309
 
-This model is not recommended for your project.
+The MSE, RMSE, MAE, and R2 Score are common evaluation metrics used to assess the performance of regression models.
+The MSE measures the average squared difference between the predicted and actual target values, with a lower MSE indicating better performance. The MSE value of 0.05837620219190338 suggests that the predicted target values are off by around 0.06 on average from the actual target values.
+The RMSE is the square root of the MSE and measures the average difference between the predicted and actual target values in the same units as the target variable. A lower RMSE also indicates better performance. The RMSE value of 0.24161167643949533 means that, on average, the predicted target values are off by around 0.24 from the actual target values.
+The MAE measures the average absolute difference between the predicted and actual target values, with a lower MAE indicating better performance. The MAE value is the same as the MSE value of 0.05837620219190338, indicating that the predicted target values are off by around 0.06 on average from the actual target values.
+The R2 score (or coefficient of determination) measures the proportion of the variance in the target variable that can be explained by the independent variables in the model. The score ranges from 0 to 1, with a higher value indicating better performance. The R2 score of 0.766493217097309 suggests that the model explains around 77% of the variance in the target variable, which is a good performance.
 
-# Linear Regression
-# Model Brief: 
-A statistical method for modeling the relationship between a dependent variable and one or more independent variables. In the project, the dependent variable is the probability of a team winning a match, and the independent variables are various input variables such as team stats, player stats, bookmakers ratings, etc.
-
-The goal of linear regression is to find the line of best fit that describes the relationship between the dependent variable and the independent variables. The line of best fit is a straight line that minimizes the sum of the squared differences between the actual values of the dependent variable and the predicted values from the independent variables.
-# Result of the Modelling
-MSE on the training set: 4.658812858842604e-26 MSE on the test set: 0.0013319759046108758
-# Overfitting test
-Ridge result: MSE on the training set: 0.0008325432220229922 MSE on the test set: 0.0020644337291440343
-Lasso Result: MSE on the training set: 0.2355202640351613 MSE on the test set: 0.23583025208025807
-Analysis The model has a very low MSE on the training set, which indicates overfitting.
-The MSE on the test set is higher than the training set, which indicates that the model is not performing well on new data. The model is likely overfitting the training data, and regularization techniques may be needed to improve the model's performance on the test set.
-
-# This model is not recommended for your project.
-Both models (Ridge and Lasso Regression) have a high MSE on the test set, indicating that they may not fit the data well. These models are not recommended for your project.
-
-# Random Forest
-# Model Brief: 
-A type of ensemble learning algorithm that uses multiple decision trees to make predictions.
-
-In the project objective, it could be used to estimate the probability of a team winning a match based on various input variables such as team stats, player stats, bookmaker ratings, etc. The model is trained on historical data to learn the relationship between the input variables and the probability of a team winning a match.
-# Result of the Modelling
-Classification Report (Training): precision recall f1-score support
-      0       1.00      1.00      1.00     35825
-       1       1.00      1.00      1.00     35707
-
-accuracy                           1.00     71532
+  # Model 3: Logistics Regression
+  
+Logistic regression is a popular machine learning technique for binary classification problems, such as predicting whether a team will win or lose a match. It models the probability of the target variable (win or lose) based on the input features, which can include various team statistics such as past performance, player injuries, and home/away field advantage.
+In the context of trying to beat bookmakers' algorithms on estimating the probability of a team winning a match, logistic regression can be a useful tool. By accurately predicting the outcome of a match, it can help identify potential betting opportunities where the bookmakers' odds differ from the predicted outcome. Additionally, logistic regression can be easily interpretable, allowing for insights into the relationships between the input features and the predicted probability of a team winning.
 
 
-macro avg 1.00 1.00 1.00 71532 weighted avg 1.00 1.00 1.00 71532
-Classification Report (Test): precision recall f1-score support
-      0       0.93      0.96      0.94      8883
-       1       0.96      0.93      0.94      9001
+![Bild117](https://user-images.githubusercontent.com/129981869/236588231-10ac33a2-ff00-482c-bf16-601f0e70b5de.png)
 
-accuracy                           0.94     17884
+The scores shows that the model is performing consistently on both the training set and the test set, with a score of 0.744 on the training set and 0.747 on the test set. The slight increase in score on the test set compared to the training set could be due to the model generalizing well to unseen data. 
 
+The Confusion Matrix shows that 6087 instances were correctly predicted as TN, 2881 instances were incorrectly predicted as FP, 1727 instances were incorrectly predicted as FN, and 7189 instances were correctly predicted as TP.
 
-macro avg 0.94 0.94 0.94 17884 weighted avg 0.94 0.94 0.94 17884
-MSE on the training set: 0.004705176704132417 MSE on the test set: 0.031402823753075376
-# Analysis 
-The model performs very well on both the training and test sets with an accuracy of 1.00 and 0.94, respectively. The model's precision, recall, and f1-score are also high for both classes (winning and losing teams), indicating that the model is able to correctly predict both outcomes with high confidence.
-However, it's important to note that the objective of the project is to beat bookmakers' algorithms on estimating the probability of a team winning a match. While the model's accuracy is high, it's not clear if it is able to outperform the bookmakers' algorithms. Additionally, the Mean Squared Error (MSE) is low for the training set but relatively higher for the test set, which may indicate that the model is overfitting on the training data and may not generalize well to new data.
-Overall, while the Random Forest model shows promising results, further analysis and comparison with bookmakers' algorithms would be needed to determine its effectiveness in beating the bookmakers.
-# Support Vector Machines:
-# Model Brief: 
-A type of supervised learning algorithm that can be used for classification or regression problems. In classification, the algorithm tries to find a hyperplane in a high-dimensional space that can best separate the different classes of data. In regression, the algorithm tries to find a function that can fit the data as closely as possible while still having a smooth and regular shape.
+![Bild118](https://user-images.githubusercontent.com/129981869/236588279-a6951016-03c5-498f-806f-f9c9cc409410.png)
 
-SVMs could be used to predict the probability of a team winning a match based on various input variables. The model would be trained on historical data to learn the relationship between the input variables and the probability of a team winning a match. SVMs have been shown to be effective in solving classification problems with high-dimensional data, which is often the case in sports betting where there are many variables to consider.
-# Result of Modelling
-Accuracy score on the training set: 0.9806939551529386 Accuracy score on the test set: 0.9785282934466563
-# Analysis
-Based on the objective of beating bookmakers' algorithms on estimating the probability of a team winning a match, the accuracy scores for the Support Vector Machine model on both the training and test sets are high, indicating that the model is performing well.
-However, without additional information on the bookmakers' algorithms and their performance on this specific task, it is difficult to determine whether this model is actually outperforming the bookmakers.
-Further analysis and comparison with the bookmakers' algorithms would be necessary to draw any conclusions about the effectiveness of the SVM model in achieving the project's objective.
+In this project aimed at beating bookmakers' algorithms on estimating the probability of a team winning a match, precision, recall, and F1-score were used to analyze the performance of the model.
 
-# Decision Tree Classifier: OUR CHOICE
-# Model Brief: 
-A type of supervised learning algorithm used for classification problems. It is used to predict the probability of a binary outcome (0 or 1) based on one or more input variables. The goal of classification is to predict a binary outcome, in which the outcome can be one of two classes, for example, whether a team will win or lose a match. The algorithm is called a decision tree because it builds a tree-like model of decisions and their possible consequences.
+Precision, which measures the proportion of true positive cases among positive predictions, was 0.78 for predicting a win and 0.78 for predicting a loss. Recall, which measures the proportion of true positive cases that are correctly identified by the model, was 0.81 for predicting a win and 0.68 for predicting a loss. The F1-score, which is the harmonic mean of precision and recall, was 0.76 for predicting a win and 0.73 for predicting a loss.
 
-In our project, it could be used to predict the probability of a team winning a match (1) or losing a match (0) based on various input variables. The model would be trained on historical data to learn the relationship between the input variables and the probability of a team winning or losing a match. The trained model could then be used to make predictions on new data to estimate the probability of a team winning or losing a match.
-
-# Result of Modelling
-Accuracy: 0.9464325654216059
-score train : 1.0 score test : 0.9464325654216059
-Prediction 0 1 True 0 8550 428 1 530 8376
-precision recall f1-score support
-      0       0.94      0.95      0.95      8978
-       1       0.95      0.94      0.95      8906
-
-accuracy                           0.95     17884
+The overall performance of the model was considered good based on these scores. The weighted average and macro average of precision, recall, and F1-score were also taken into account to compare the performance of the model across different classes.
 
 
-macro avg 0.95 0.95 0.95 17884 weighted avg 0.95 0.95 0.95 17884
-# Analysis: 
-The model has an accuracy score of 0.946 on both the train and test sets, which is a good indicator that the model is not overfitting.
+  # Model 4: Linear Regression
+  
+Linear regression can be used to estimate the probability of a team winning a match, which is the primary objective of this project - to beat bookmakers' algorithms on estimating this probability.
 
-The precision, recall, and f1-score for both classes are above 0.9, which is also a good indicator of a good performing model. Based on the classification report, the model performs well in predicting both class 0 and class 1, with a slightly higher recall for class 0.
+This model is a simple yet effective method for modeling the relationship between a dependent variable and one or more independent variables. In the context of predicting match outcomes, the independent variables could be factors such as team rankings, player statistics, match location, and past performance. By training a linear regression model on historical data and testing it on new data, the model can learn to make accurate predictions on the probability of a team winning a match. This can help in identifying potential betting opportunities where the model's predictions differ significantly from the bookmakers' odds, and the model can be used to make profitable bets.
+  
 
+![Bild119](https://user-images.githubusercontent.com/129981869/236588355-d9167fd7-db68-41ea-a3c3-a4b908881d18.png)
 
+MSE on the training set: 4.658812858842604e-26
+MSE on the test set: 0.0013319759046108758
 
-# Logistic Regression:
-# Model Brief: 
-A type of supervised learning algorithm used for binary classification problems. It is used to predict the probability of a binary outcome (0 or 1) based on one or more input variables.
-In our project, it could be used to predict the probability of a team winning a match (1) or losing a match (0) based on various input variables. The model would be trained on historical data to learn the relationship between the input variables and the probability of a team winning or losing a match. The trained model could then be used to make predictions on new data to estimate the probability of a team winning or losing a match.
-# Result of the Modelling
-Score on the train set 0.741570206341218 
-Score on the test set 0.7423395213598748
+The results show that the mean squared error (MSE) on the training set is significantly lower than the MSE on the test set, indicating that the model may have overfit the training data.
 
-Prediction	0	1
-True		
-0	6561	2359
-1	1999	6965
-             precision    recall  f1-score   support
+The MSE on the training set is extremely low at 4.658812858842604e-26, which suggests that the model is able to predict the target variable very accurately on the training data. 
 
-           0       0.77      0.74      0.75      8920
-           1       0.75      0.78      0.76      8964
+However, the MSE on the test set is higher at 0.0013319759046108758, indicating that the model may not perform as well when presented with new, unseen data.
 
-    accuracy                           0.76     17884
-   macro avg       0.76      0.76      0.76     17884
-weighted avg       0.76      0.76      0.76     17884
+Therefore, the model may not generalize well to new data, indicating the presence of overfitting.
 
-accuracy                           0.74     17884
+The researchers decided to apply Ridge and Lasso regression to verify if the model is overfitting or not. 
 
+Ridge Result:
+MSE on the training set: 0.0008325432220229922
+MSE on the test set: 0.0020644337291440343
 
-macro avg 0.75 0.74 0.74 17884 weighted avg 0.75 0.74 0.74 17884
-# Analysis:
-The model has an accuracy score of 0.741 on the training set and 0.742 on the test set, which indicates that the model is not overfitting. Also means that it can predict the outcome of the match with moderate accuracy.
+Based on the results of Ridge and Lasso, it appears that the models may be overfitting the data. In the case of Ridge, the mean squared error (MSE) on the training set is significantly lower than the MSE on the test set, which could be a sign of overfitting. The MSE on the training set is 0.0008325432220229922, which indicates that the model can predict the target variable very accurately on the training data. However, the MSE on the test set is higher at 0.0020644337291440343, which suggests that the model may not generalize well to new, unseen data.
 
-The precision, recall, and f1-score for both classes are above 0.7, which is also a good indicator of a good performing model. Based on the classification report, the model performs better in predicting class 1 than class 0, with a higher recall for class. All scores are also moderate for both classes, indicating average performance on predicting wins and losses. This model may be useful as a complement to other models, but may not be sufficient on its own to beat bookmakers' algorithms.
+Lasso Result:
+MSE on the training set: 0.2355202640351613
+MSE on the test set: 0.23583025208025807
 
+Similarly, in the case of Lasso, the MSE on the training set is again significantly lower than the MSE on the test set, which is indicative of overfitting. The MSE on the training set is 0.2355202640351613, which suggests that the model is fitting the training data very closely. However, the MSE on the test set is 0.23583025208025807, which is not significantly different from the MSE on the training set, and suggests that the model may not be able to generalize well to new data.
 
+Overall, the results of both Ridge and Lasso indicate that the models may be overfitting the data, and further analysis is needed to improve their performance on new, unseen data.
+
+At the end it appears that the linear regression model without regularization is overfitting the training data and not generalizing well to the test data. It may not be the best model for this dataset without applying some form of regularization, such as Ridge or Lasso regression.
 
 
+  # Model 5: Random Forest
+  
+  
+Random Forest is a popular machine learning algorithm used for both classification and regression tasks. It is a powerful model that can handle complex relationships between features and target variables. In the context of this project, Random Forest is a suitable algorithm to use because it can potentially improve the accuracy of predicting the probability of a team winning a match, which aligns with the project objective of beating bookmakers' algorithms.
 
-# Data Analysis
-# PCA
-The output below the graph shows the actual eigenvalues for the top 5 principal components, as well as their corresponding explained variance ratios. These values give an idea of the importance of each principal component in explaining the variability of the data.
-The higher the eigenvalue, the more important the corresponding principal component is in capturing the underlying patterns in the data. In this case, the first principal component has the highest eigenvalue, followed by the second, third, fourth, and fifth.
-[0.00200492 0.00190119 0.00178492 0.00161347 0.00157185] Eigenvalues are: [4.66350113 4.42223503 4.15179269 3.752989 3.65617574]
+Additionally, Random Forest can handle non-linear relationships and interactions between variables, which may be present in the data.
+
+
+![Bild120](https://user-images.githubusercontent.com/129981869/236588431-79699296-374c-42b9-b0af-91a0e2559aef.png)
+
+The classification report for both the training and test sets shows high precision, recall, and f1-score values for both classes (0 and 1), with an accuracy of 1.00 for the training set and 0.94 for the test set. This suggests that the random forest model is able to accurately classify the target variable (win or lose) for both the training and test sets.
+
+However, there is a slight decrease in accuracy on the test set compared to the training set, indicating that the model may have overfit the training data to some extent. Additionally, the computation time of 2 hours suggests that the model may be computationally expensive and may not be suitable for large-scale applications.
+
+Overall, the random forest model shows promising results in accurately classifying the target variable, but further analysis and testing may be needed to ensure that it is not overfitting and can be used in a practical setting.
+
+
+![Bild121](https://user-images.githubusercontent.com/129981869/236588489-fef4521f-bdd9-4f24-a833-cf5a4bc06f85.png)
+
+  # Model 6: Support Vector Machine
+  
+  
+Support Vector Machine (SVM) is also a popular machine learning algorithm used for classification and regression analysis. In this project, SVM may have been chosen because it is a powerful algorithm that can handle high-dimensional datasets, and can be effective at identifying non-linear relationships between features.
+
+Regarding the project objective, SVM could be used to try to beat bookmakers' algorithms on estimating the probability of a team winning a match by using various features such as the team's past performance, player statistics, and other relevant factors to predict the outcome of a game. 
+
+By training an SVM model on historical data, it could be possible to identify patterns and relationships that may not be apparent through manual analysis, potentially leading to more accurate predictions and improved betting strategies.
+
+
+![Bild122](https://user-images.githubusercontent.com/129981869/236588538-7847e037-3f4c-480c-8e67-83ae37d06d8a.png)
+
+The accuracy score shows that the SVM model achieved high accuracy on both the training set (0.9806939551529386) and the test set (0.9785282934466563), indicating that the model is able to classify new data with high accuracy.
+
+However, the long computation time of 5 hours suggests that the model may not be scalable for larger datasets or real-time predictions.
+
+It's important to note that accuracy alone may not be the only important metric to consider, especially in a classification problem where the classes are imbalanced. Other metrics such as precision, recall, and F1-score may provide a more comprehensive evaluation of the model's performance.
+
+
+# Model Choice
+
+After evaluating six different machine learning models, the team ultimately chose logistic regression as the primary option and decision tree regression as the secondary choice. The logistic regression model exhibited a precision score of 0.78 for both predicting a win and predicting a loss, while the recall score was 0.81 for predicting a win and 0.68 for predicting a loss. The F1-score was 0.76 for predicting a win and 0.73 for predicting a loss.
+
+Meanwhile, the decision tree regression model showed a perfect score of 1.0 on the training set, but a lower score of 0.766493217097309 on the test set. The model had a mean squared error of 0.05837620219190338, a root mean squared error of 0.24161167643949533, a mean absolute error of 0.05837620219190338, and an R2 score of 0.766493217097309.
+
+Based on these results, the logistic regression model performed better on the test set, while the decision tree regression model showed signs of overfitting on the training set.
+
+# PCA - Principal Component Analysis
+
+PCA (Principal Component Analysis) is a technique used for reducing the dimensionality of large datasets. In the context of this project, the objective is to beat bookmakers' algorithms on estimating the probability of a team winning a match. To achieve this goal, the model needs to be able to handle a large amount of data and extract meaningful information from it. PCA can help to achieve this by reducing the number of features in the dataset while retaining most of the important information.
+
+By reducing the number of features, PCA can simplify the model and improve its performance by reducing the risk of overfitting. This is important because overfitting can lead to poor generalization of the model to new data, which is crucial for accurately predicting the outcome of a match. Additionally, PCA can help to identify the most important features in the dataset and eliminate any redundant or irrelevant features.
+
+Overall, the use of PCA in this project can help to improve the performance of the model by reducing the dimensionality of the data, simplifying the model, and identifying the most important features for accurately predicting the outcome of a match.
 
 
 
+![Bild123](https://user-images.githubusercontent.com/129981869/236588603-a540b1b2-56ca-4758-a267-127950cf6ae9.png)
 
-![Bild47](https://user-images.githubusercontent.com/129981869/236512348-415319bb-5e75-4147-a336-0d6e32445ef9.png)
+The researchers identified the eigenvalues which represent the variance explained by each principal component in the PCA analysis. It suggests that the first principal component explains the most variance (0.00200492), followed by the second (0.00190119), and so on.
 
+![Bild124](https://user-images.githubusercontent.com/129981869/236588620-899fdc36-398c-411f-aada-4cf490bfc42a.png)
 
+The second set of values represent the importance or weight of each principal component in the analysis. The first principal component has the highest weight (4.66350113), followed by the second (4.42223503), and so on. This suggests that the first few principal components are the most important in explaining the underlying variability in the data.
 
+These eigenvalue were plotted below: 
 
+![Bild125](https://user-images.githubusercontent.com/129981869/236588652-21b4d1e0-220f-44a6-8ed5-8046a2bb0e1e.png)
 
-![Bild48](https://user-images.githubusercontent.com/129981869/236512405-92b7d860-8ae7-45fd-99ed-dc7f861a3612.png)
-
-
-
-
-![Bild49](https://user-images.githubusercontent.com/129981869/236512494-ea50611c-0b23-49a1-88fe-e99572b2dd98.png)
-
-
+The pca.explained_variance_ratio_ attribute returns an array of the variance explained by each principal component as a fraction of the total variance. The array indicates that the first principal component accounts for 0.1999% of the total variance, the second principal component accounts for 0.1894%, the third principal component accounts for 0.1777%, the fourth principal component accounts for 0.1607%, and the fifth principal component accounts for 0.1567%. See graph below for visualization.
 
 
+![Bild126](https://user-images.githubusercontent.com/129981869/236588675-4df91f70-8d73-47e5-b0c5-211dfb0a1db4.png)
 
-![Bild50](https://user-images.githubusercontent.com/129981869/236512550-709f38ee-9250-4483-bf2f-99a3b1ed58e7.png)
+Based on this analysis, it can be inferred that the first principal component explains the highest variance, while the subsequent components explain a progressively smaller amount of variance. The sum of the values in the array gives the total amount of variance explained by the five components, which is approximately 0.69%.
+
+This information is helpful in deciding the number of principal components to include in the analysis, based on the desired level of explained variance.
+
+
+![Bild127](https://user-images.githubusercontent.com/129981869/236588754-2e2d0fe2-ee75-43d6-afd3-a5060286f851.png)
+
+
+
+![Bild128](https://user-images.githubusercontent.com/129981869/236588775-58bcf668-babe-4741-800a-75a3fb49fab2.png)
+
+
+![Bild129](https://user-images.githubusercontent.com/129981869/236588797-fe27b589-f5f5-4948-a00d-6f369ed2753a.png)
 
 
 
 
-![Bild51](https://user-images.githubusercontent.com/129981869/236512628-bff7b8c5-a287-4275-88e7-d5769a338bd3.png)
+
+
+
+
+
+
+
 
 # tSNE
 # K-means
 
-# Stages of the project
+                       # Stages of the project
 # Classification of the problem 
 What kind of machine learning problem is your project like? (classification, regression, clustering, etc)
 What task does your project relate to? (fraud detection, facial recognition, sentiment analysis, etc)?
@@ -681,9 +834,9 @@ Professional scenario: based on a proposed solution, the candidate will have to 
 
 
 
-# Final report : 
-Conclusion drawn
-Difficulties encountered during the project
+                       # Final report  
+                       # Conclusion drawn
+#Difficulties encountered during the project
 What was the main scientific obstacle encountered during this project?
 For each of the following points, if you encountered difficulties, detail how they slowed you down in setting up your project.
 Forecast: tasks that took longer than expected, etc.
